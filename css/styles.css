@@ -336,7 +336,7 @@ body {
 
 .in_icon_active {
     width: 45px;
-    top: 64.5px;
+    top: 66.5px;
     left: 45.5px;
     position: absolute;
 
@@ -366,7 +366,7 @@ body {
 
 .index_icon_active {
     width: 45px;
-    top: 64.5px;
+    top: 66.5px;
     left: 98.5px;
     position: absolute;
 
@@ -782,6 +782,12 @@ body {
 }
 
 .DW2_imgCert {
+    width: 100ch;
+    border-radius: 20px;
+    filter: drop-shadow(0px 0px 25px black);
+}
+
+.HighSchool_cert {
     width: 100ch;
     border-radius: 20px;
     filter: drop-shadow(0px 0px 25px black);
