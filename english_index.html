@@ -590,12 +590,21 @@
 
                         <h1 class="sectionTitle contact_title" >Keep in touch!!</h1>
                 
-                        <form class="contact_form" action="">
-                            <input class="name_imput imput" type="text" name="fullname" placeholder="  name">
-                            <input class="email_imput imput" type="email" name="email" placeholder="  email">
-                            <textarea class="message_imput imput" name="message" rows="4" placeholder="  your message"></textarea>
+                        <form class="contact_form" action="https://formspree.io/f/mkgnnapo" method="POST">
+                            <!-- Honeypot (campo oculto para prevenir spam) -->
+                            <input type="text" name="_gotcha" style="display:none">
+                        
+                            <!-- Campos del formulario -->
+                            <input class="name_imput imput" type="text" name="fullname" placeholder="  name" required>
+                            <input class="email_imput imput" type="email" name="email" placeholder="  email" required>
+                            <textarea class="message_imput imput" name="message" rows="4" placeholder="  your message" required></textarea>
+                            
+                            <!-- Botones -->
                             <button class="clear_button button" type="reset">clear</button>
-                            <button class="send_button button" type="submit">send</button>    
+                            <button class="send_button button" type="submit">send</button>
+                        
+                            <!-- Redireccionamiento a una página de agradecimiento -->
+                            <input type="hidden" name="_next" value="https://tu-sitio.com/gracias.html">
                         </form>
                         
                         <!-- ------------------------------------------------------------------------------- -->
