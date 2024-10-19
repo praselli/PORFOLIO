@@ -271,7 +271,7 @@ body {
     left: 15px;
     position: absolute;
     cursor:pointer;    /*!! <<< PUNTERO DE SELECCIÓN */
-    opacity: 0.7;
+    opacity: 0.6;
     z-index: 10;
     transition: 0.5s;
 }
@@ -283,7 +283,7 @@ body {
     transform: rotate(60deg);
     position: absolute;
     cursor:pointer;    /*!! <<< PUNTERO DE SELECCIÓN */
-    opacity: 0.7;
+    opacity: 0.6;
     z-index: 10;
     transition: 0.5s;
 }
@@ -1596,16 +1596,20 @@ body {
 .name_imput {
     grid-column: 1 / 4;
     grid-row: 1;
+    padding: 1rem;
 }
 
 .email_imput {
     grid-column: 1 / 4;
     grid-row: 3;
+    padding: 1rem;
 }
 
 .message_imput {
     grid-column: 1 / 4;
     grid-row: 5 / 8;
+    padding: 1rem;
+    padding-top: 0.3rem;
 }
 
 .dotted_line_contact {
@@ -1686,7 +1690,7 @@ body {
     margin: auto;
 }
 
-.ws_icon {
+.ws_link_icon {
     grid-column: 7 / 8;
     grid-row: 11 / 12;
 }
