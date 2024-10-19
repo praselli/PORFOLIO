@@ -407,6 +407,23 @@ body {
     transition: 0.5s;
 }
 
+/*! -------------------------------------- RESUME DOWNLOAD ----------------------------------------*/
+
+.download_text {
+    text-decoration: none;
+    font-family: alumniFont;
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    text-align: left;
+    letter-spacing: 0.07em;
+    line-height: 60px;
+    text-align: center;
+}
+
+.text_link {
+    text-decoration: none;
+}
 
 /*! ---------------------------------------------------------------------------------------------------*/
 /*! -------------------------------------- CONTENIDO "PROFILE" ----------------------------------------*/

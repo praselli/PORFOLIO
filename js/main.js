@@ -1,3 +1,6 @@
+
+/* --------------------------------- BARRAS EXPANSIBLES -------------------------------------*/
+
 function expandSection(sectionId) {
     const bars = document.querySelectorAll('.bar');
     const container = document.querySelector('.container');
@@ -23,8 +26,7 @@ function expandSection(sectionId) {
     });
 }
 
-
-/* -------- MENU POP-UP -----------*/
+/* ------------------------------------ MENU POP-UP ----------------------------------------*/
 
 document.addEventListener('DOMContentLoaded', () => {
     // Selecciona el ícono principal y los íconos del menú
