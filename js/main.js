@@ -44,6 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // Alterna las clases de los íconos del menú
         if (isMenuActive) {
             // Activar el menú
+            logoIcon.classList.remove('logo_icon');
+            logoIcon.classList.add('logo_icon_active');
+
             downloadIcon.classList.remove('download_icon_hide');
             downloadIcon.classList.add('download_icon_active');
 
@@ -57,6 +60,9 @@ document.addEventListener('DOMContentLoaded', () => {
             menuDivisor.classList.add('menu_divisor_active');
         } else {
             // Desactivar el menú
+            logoIcon.classList.remove('logo_icon_active');
+            logoIcon.classList.add('logo_icon');
+
             downloadIcon.classList.remove('download_icon_active');
             downloadIcon.classList.add('download_icon_hide');
 

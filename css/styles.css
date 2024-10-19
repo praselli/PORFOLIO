@@ -271,22 +271,28 @@ body {
     left: 15px;
     position: absolute;
     cursor:pointer;    /*!! <<< PUNTERO DE SELECCIÓN */
-    opacity: 0;
-    filter: blur(20px);
+    opacity: 0.7;
     z-index: 10;
-
-    animation-name: logo_iconAni;
-    animation-duration: 2.5s;
-    animation-fill-mode: forwards;
-    animation-delay: 3s;
+    transition: 0.5s;
 }
 
-@keyframes logo_iconAni {
-0% { opacity: 0; filter: blur(20px); }
-100% { opacity: 0.8; filter: blur(0px); }
+.logo_icon_active {
+    width: 50px;
+    top: 15px;
+    left: 15px;
+    transform: rotate(60deg);
+    position: absolute;
+    cursor:pointer;    /*!! <<< PUNTERO DE SELECCIÓN */
+    opacity: 0.7;
+    z-index: 10;
+    transition: 0.5s;
 }
 
 .logo_icon:hover {
+    opacity: 1;
+}
+
+.logo_icon_active:hover {
     opacity: 1;
 }
 
@@ -307,7 +313,7 @@ body {
 .download_icon_active {
     width: 45px;
     top: 19px;
-    left: 71.5px;
+    left: 72.5px;
     position: absolute;
 
     opacity: 0.8;
@@ -337,7 +343,7 @@ body {
 .in_icon_active {
     width: 45px;
     top: 66.5px;
-    left: 45.5px;
+    left: 44.5px;
     position: absolute;
 
     opacity: 0.8;
@@ -367,7 +373,7 @@ body {
 .index_icon_active {
     width: 45px;
     top: 66.5px;
-    left: 98.5px;
+    left: 97.5px;
     position: absolute;
 
     opacity: 0.8;
@@ -394,7 +400,7 @@ body {
 .menu_divisor_active {
     width: 50px;
     top: 61px;
-    left: 69.5px;
+    left: 68.5px;
     position: absolute;
     scale: 1;
     /* opacity: 1; */
