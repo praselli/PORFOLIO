@@ -1,0 +1,2180 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+/*! ---------------------------------------------------------------------------------------------------------- */
+/*! ---------------------------------------------------------------------------------------------------------- */
+/*! ---------------------------------------------------------------------------------------------------------- */
+
+body {
+    width: 100%;
+    height: 100vh;
+
+    background-size: 100vw 100%;
+    background-repeat: no-repeat;
+    overflow-y: hidden;
+
+    background-size: cover;
+    background-color: rgb(88, 88, 88);
+
+    animation-name: backgroundSlide;
+    animation-duration: 80s;
+    animation-iteration-count: infinite;
+
+    display: grid;
+    grid-template-columns: auto 510px auto;        /*! <<<<< LOS PX DEL MEDIO SON LA SUMATORIA DEL "introContent" */
+    grid-template-rows: auto 480px 2rem 40px auto; /*! <<<<< LOS PX DEL MEDIO SON LA SUMATORIA DEL "introContent" */
+}
+
+@keyframes backgroundSlide {
+
+    0% {background-image: url(../img/backgrounds/18.png);}
+
+    13% {background-image: url(../img/backgrounds/15.png);}
+
+    25% {background-image: url(../img/backgrounds/17.png);}
+
+    37% {background-image: url(../img/backgrounds/11.png);}
+
+    49% {background-image: url(../img/backgrounds/09.png);}
+
+    61% {background-image: url(../img/backgrounds/17.png);}
+
+    72% {background-image: url(../img/backgrounds/06.png);}
+
+    84% {background-image: url(../img/backgrounds/07.png);}
+
+    100% {background-image: url(../img/backgrounds/18.png);}
+}
+
+/*!! ------------------------------------------  FONTS  ------------------------------------------------- */
+
+@font-face {
+    font-family: agencyFont;
+    src: url(../fonts/AGENCYR.TTF);
+}
+
+@font-face {
+    font-family: antiqueBookCoverFont;
+    src: url(../fonts/antique_book_cover.otf);
+}
+
+@font-face {
+    font-family: corbelFont;
+    src: url(../fonts/corbel.ttf);
+}
+
+@font-face {
+    font-family: antonioFont;
+    src: url(../fonts/Antonio-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: cinematograficaFont;
+    src: url(../fonts/Cinematografica-Regular-trial.ttf);
+}
+
+@font-face {
+    font-family: dreamsFont;
+    src: url(../fonts/DREAMS.ttf);
+}
+
+@font-face {
+    font-family: conexyFont;
+    src: url(../fonts/Konexy\ Font.otf);
+}
+
+@font-face {
+    font-family: neutroFont;
+    src: url(../fonts/Neutro-Bold.otf);
+}
+
+@font-face {
+    font-family: alumniFont;
+    src: url(../fonts/AlumniSansPinstripe-Regular.ttf);
+}
+
+@font-face {
+    font-family: rosnocFont;
+    src: url(../fonts/Rosnoc.otf);
+}
+
+@font-face {
+    font-family: euroFont;
+    src: url(../fonts/EuroStyle\ Normal.ttf);
+}
+
+@font-face {
+    font-family: kincrevFont;
+    src: url(../fonts/Kincrev-L3rPg.otf);
+}
+
+@font-face {
+    font-family: bobcatFont;
+    src: url(../fonts/Bobcat-Regular.ttf);
+}
+
+@font-face {
+    font-family: elyzabethFont;
+    src: url(../fonts/ElyzabethPro-Regular.otf);
+}
+
+@font-face {
+    font-family: zrnicFont;
+    src: url(../fonts/zrnic\ rg.ttf);
+}
+
+
+/*!! ---------------------------------------------------------------------------------------------------- */
+
+.introContent {
+    width: 100%;
+    height: 100%;
+    grid-column: 2;
+    grid-row: 2;
+
+    display: grid;
+    grid-template-columns: 75px 80px 200px 80px 75px;
+    grid-template-rows: 121.3px 81.2px 75px 81.2px auto;
+}
+
+.englishButton {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+
+    font-family: agencyFont;
+    font-size: 40px;
+    color: #ffffffb0;
+    text-decoration: none;
+    text-shadow: (0px 0px 10x #000000);
+
+    z-index: 2;
+    transition: 0.8s;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    opacity: 0;
+    transform: translateX(80px);
+
+    animation-name: englishButtonAni;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 6s;
+}
+
+@keyframes englishButtonAni {
+    0% {
+        opacity: 0;
+        transform: translateX(80px);
+        filter: blur(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(00px);
+        filter: blur(0px);
+    }
+}
+
+.englishButton:hover {
+    letter-spacing: 0.05em;
+    color: #ffffff;
+    text-shadow: 0px 0px 12px rgba(164, 233, 218, 0.945);
+    -webkit-text-stroke: 0.2px rgb(125, 238, 229);
+}
+
+.espanishButton {
+    grid-column: 4 / 6;
+    grid-row: 3 / 4;
+
+    font-family: agencyFont;
+    font-size: 40px;
+    color: #ffffffb0;
+    text-decoration: none;
+    text-shadow: (0px 0px 10px #000000);
+
+    z-index: 2;
+    transition: 0.8s;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    opacity: 0;
+    transform: translateX(-80px);
+
+    animation-name: espanishButtonAni;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 6s;
+}
+
+@keyframes espanishButtonAni {
+    0% {
+        opacity: 0;
+        transform: translateX(-80px);
+        filter: blur(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(00px);
+        filter: blur(0px);
+    }
+}
+
+.espanishButton:hover {
+    letter-spacing: 0.05em;
+    color: #ffffff;
+    text-shadow: 0px 0px 12px rgba(164, 233, 218, 0.945);
+    -webkit-text-stroke: 0.2px rgb(125, 238, 229);
+}
+
+/*! ----------------------------------------------------------------------------------------------------*/
+/*! --------------------------------------- ELEMENTOS LOGO  --------------------------------------------*/
+/*! ----------------------------------------------------------------------------------------------------*/
+
+.logoConteiner {
+    width: 200px;
+    grid-column: 3 / 4;
+    grid-row: 2 / 5;
+    position: relative;
+}
+
+.letraP {
+    width: 153.2px;
+    position: absolute;
+    top: 16px;
+    left: 14px;
+
+    opacity: 0;
+    animation-name: letraPAni;
+    animation-duration: 5.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 4.5s;
+    z-index: 5;
+}
+
+@keyframes letraPAni {
+    0% {
+        opacity: 0;
+        filter: drop-shadow(0px 0px 2px #000000);
+    }
+
+    100% {
+        opacity: 1;
+        filter: drop-shadow(0px 0px 9px #000000);
+    }
+}
+
+.letraR {
+    width: 106px;
+    position: absolute;
+    top: 66.7px;
+    left: 80px;
+
+    opacity: 0;
+    animation-name: letraRAni;
+    animation-duration: 5.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 4.6s;
+}
+
+@keyframes letraRAni {
+    0% {
+        opacity: 0;
+        filter: drop-shadow(0px 0px 2px #000000);
+    }
+
+    100% {
+        opacity: 1;
+        filter: drop-shadow(0px 0px 9px #000000);
+    }
+}
+
+.hexagono {
+    width: 200px;
+    position: absolute;
+    top: -1px;
+    left: 0px;
+
+    opacity: 0;
+    animation-name: hexagonoRAni;
+    animation-duration: 7.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 4.7s;
+}
+
+@keyframes hexagonoRAni {
+    0% {
+        opacity: 0;
+        filter: drop-shadow(0px 0px 2px #000000);
+    }
+
+    100% {
+        opacity: 1;
+        filter: drop-shadow(0px 0px 15px #000000);
+    }
+}
+
+.hexaLinea01 {
+    width: 276.5px;
+    position: absolute;
+    top: -47px;
+    left: -37px;
+    transform: rotate(-60deg);
+
+    opacity: 0;
+    animation-name: hexaLinea01Ani;
+    animation-duration: 5.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 6s;
+}
+
+@keyframes hexaLinea01Ani {
+    0% {
+        opacity: 0;
+        filter: drop-shadow(0px 0px 2px #000000);
+    }
+
+    100% {
+        opacity: 1;
+        filter: drop-shadow(0px 0px 15px #000000);
+    }
+}
+
+.hexaLinea02 {
+    width: 276.5px;
+    position: absolute;
+    top: -44.5px;
+    left: -38px;
+
+    opacity: 0;
+    animation-name: hexaLinea02Ani;
+    animation-duration: 5.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 6.4s;
+}
+
+@keyframes hexaLinea02Ani {
+    0% {
+        opacity: 0;
+        filter: drop-shadow(0px 0px 2px #000000);
+    }
+
+    100% {
+        opacity: 1;
+        filter: drop-shadow(0px 0px 15px #000000);
+    }
+}
+
+.hexaLinea03 {
+    width: 276.5px;
+    position: absolute;
+    top: -45.5px;
+    left: -38px;
+
+    opacity: 0;
+    animation-name: hexaLinea03Ani;
+    animation-duration: 5.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 6.8s;
+}
+
+@keyframes hexaLinea03Ani {
+    0% {
+        opacity: 0;
+        filter: drop-shadow(0px 0px 2px #000000);
+    }
+
+    100% {
+        opacity: 1;
+        filter: drop-shadow(0px 0px 15px #000000);
+    }
+}
+
+.hexaLinea04 {
+    width: 276.5px;
+    position: absolute;
+    top: -45.5px;
+    left: -37px;
+    transform: rotate(60deg);
+
+    opacity: 0;
+    animation-name: hexaLinea04Ani;
+    animation-duration: 5.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 7.2s;
+}
+
+@keyframes hexaLinea04Ani {
+    0% {
+        opacity: 0;
+        filter: drop-shadow(0px 0px 2px #000000);
+    }
+
+    100% {
+        opacity: 1;
+        filter: drop-shadow(0px 0px 15px #000000);
+    }
+}
+
+.hexaLinea05 {
+    width: 276.5px;
+    position: absolute;
+    top: -45.5px;
+    left: -38px;
+
+    opacity: 0;
+    animation-name: hexaLinea05Ani;
+    animation-duration: 5.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 7.6s;
+}
+
+@keyframes hexaLinea05Ani {
+    0% {
+        opacity: 0;
+        filter: drop-shadow(0px 0px 2px #000000);
+    }
+
+    100% {
+        opacity: 1;
+        filter: drop-shadow(0px 0px 15px #000000);
+    }
+}
+
+.hexaLinea06 {
+    width: 276.5px;
+    position: absolute;
+    top: -45.5px;
+    left: -38px;
+
+    opacity: 0;
+    animation-name: hexaLinea06Ani;
+    animation-duration: 5.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 8s;
+}
+
+@keyframes hexaLinea06Ani {
+    0% {
+        opacity: 0;
+        filter: drop-shadow(0px 0px 2px #000000);
+    }
+
+    100% {
+        opacity: 1;
+        filter: drop-shadow(0px 0px 15px #000000);
+    }
+}
+
+/*! -------------------------------------------------------------------------------------------------------*/
+/*! -------------------------------------- LINEAS ANIMACION  ----------------------------------------------*/
+/*! -------------------------------------------------------------------------------------------------------*/
+
+/* ------------------------------------------ LINEAS LETRA P  ---------------------------------------------*/
+
+.linea01p {
+    width: 100px;
+    position: absolute;
+
+    top: -52.7px;
+    right: -20px;
+    opacity: 0;
+
+    animation-name: linea01pAni;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+}
+
+@keyframes linea01pAni {
+    0% {
+        top: -52.7px;
+        right: -20px;
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.2;
+    }
+
+    100% {
+        top: 40.7px;
+        right: 140px;
+        opacity: 0;
+    }
+}
+
+.linea02p {
+    width: 100px;
+    position: absolute;
+
+    top: -31px;
+    right: 80px;
+    opacity: 0;
+
+    animation-name: linea02pAni;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.3s;
+}
+
+@keyframes linea02pAni {
+    0% {
+        top: -31Px;
+        right: 80px;
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.2;
+    }
+
+    100% {
+        top: 34px;
+        right: -30px;
+        opacity: 0;
+    }
+}
+
+.linea03p {
+    width: 130.2px;
+    position: absolute;
+
+    top: 20px;
+    right: -25px;
+    opacity: 0;
+
+    animation-name: linea03pAni;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.5s;
+}
+
+@keyframes linea03pAni {
+    0% {
+        top: 20px;
+        right: -25px;
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.2;
+    }
+
+    100% {
+        top: 89px;
+        right: 90px;
+        opacity: 0;
+    }
+}
+
+.linea04p {
+    width: 107.1px;
+    position: absolute;
+    transform: rotate(-225deg);
+
+    top: 25px;
+    right: 92px;
+    opacity: 0;
+
+    animation-name: linea04pAni;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.05s;
+}
+
+@keyframes linea04pAni {
+    0% {
+        top: 25px;
+        right: 92px;
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.2;
+    }
+
+    100% {
+        top: 90px;
+        right: 92px;
+        opacity: 0;
+    }
+}
+
+.linea05p {
+    width: 130.2px;
+    position: absolute;
+
+    top: 77px;
+    right: 105px;
+    opacity: 0;
+
+    animation-name: linea05pAni;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.15s;
+}
+
+@keyframes linea05pAni {
+    0% {
+        top: 77px;
+        right: 105px;
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.2;
+    }
+
+    100% {
+        top: 21px;
+        right: 10px;
+        opacity: 0;
+    }
+}
+
+.linea06p {
+    width: 130.2px;
+    position: absolute;
+
+    top: 4px;
+    right: 25px;
+    opacity: 0;
+
+    animation-name: linea06pAni;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.15s;
+}
+
+@keyframes linea06pAni {
+    0% {
+        top: 37px;
+        right: -30px;
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.2;
+    }
+
+    100% {
+        top: 4px;
+        right: 25px;
+        opacity: 0;
+    }
+}
+
+.linea07p {
+    width: 130.2px;
+    position: absolute;
+
+    top: 70px;
+    right: 155px;
+    opacity: 0;
+
+    animation-name: linea07pAni;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+}
+
+@keyframes linea07pAni {
+    0% {
+        top: 70px;
+        right: 155px;
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.2;
+    }
+
+    100% {
+        top: -10px;
+        right: 20px;
+        opacity: 0;
+    }
+}
+
+.linea08p {
+    width: 107.1px;
+    position: absolute;
+    transform: rotate(-45deg);
+
+    top: 120px;
+    right: 112px;
+    opacity: 0;
+
+    animation-name: linea08pAni;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.20s;
+}
+
+@keyframes linea08pAni {
+    0% {
+        top: 120px;
+        right: 112px;
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.2;
+    }
+
+    100% {
+        top: 35px;
+        right: 112px;
+        opacity: 0;
+    }
+}
+
+.linea09p {
+    width: 130.2px;
+    position: absolute;
+
+    top: 142px;
+    right: 100px;
+    opacity: 0;
+
+    animation-name: linea09pAni;
+    animation-duration: 0.95s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.1s;
+}
+
+@keyframes linea09pAni {
+    0% {
+        top: 142x;
+        right: 100px;
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.2;
+    }
+
+    100% {
+        top: 158px;
+        right: 75px;
+        opacity: 0;
+    }
+}
+
+.linea10p {
+    width: 107.1px;
+    position: absolute;
+    transform: rotate(-225deg);
+
+    top: 25px;
+    right: 131px;
+    opacity: 0;
+
+    animation-name: linea10pAni;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.15s;
+}
+
+@keyframes linea10pAni {
+    0% {
+        top: 25px;
+        right: 131px;
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.2;
+    }
+
+    100% {
+        top: 85px;
+        right: 131px;
+        opacity: 0;
+    }
+}
+
+
+/* ------------------------------------------ LINEAS LETRA R  ------------------------------------------*/
+
+.linea01r {
+    width: 100px;
+    position: absolute;
+
+    top: 141.3px;
+    right: 140px;
+    opacity: 0;
+
+    animation-name: linea01rAni;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.6s;
+}
+
+@keyframes linea01rAni {
+    0% {
+        top: 141.3Px;
+        right: 140px;
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.2;
+    }
+
+    100% {
+        top: 43.3px;
+        right: -26.7px;
+        opacity: 0;
+    }
+}
+
+.linea02r {
+    width: 107.1px;
+    position: absolute;
+    transform: rotate(-225deg);
+
+    top: 20px;
+    right: -39px;
+    opacity: 0;
+
+    animation-name: linea02rAni;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.55s;
+}
+
+@keyframes linea02rAni {
+    0% {
+        top: 20px;
+        right: -39px;
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.2;
+    }
+
+    100% {
+        top: 80px;
+        right: -39px;
+        opacity: 0;
+    }
+}
+
+.linea03r {
+    width: 130.2px;
+    position: absolute;
+
+    top: 100px;
+    right: -45px;
+    opacity: 0;
+
+    animation-name: linea03rAni;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.5s;
+}
+
+@keyframes linea03rAni {
+    0% {
+        top: 100px;
+        right: -45px;
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.2;
+    }
+
+    100% {
+        top: 150px;
+        right: 40px;
+        opacity: 0;
+    }
+}
+
+.linea04r {
+    width: 130.2px;
+    position: absolute;
+
+    top: 42px;
+    right: 100px;
+    opacity: 0;
+
+    animation-name: linea04rAni;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.45s;
+}
+
+@keyframes linea04rAni {
+    0% {
+        top: 42x;
+        right: 100px;
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.2;
+    }
+
+    100% {
+        top: 110px;
+        right: -15px;
+        opacity: 0;
+    }
+}
+
+.linea05r {
+    width: 130.2px;
+    position: absolute;
+
+    top: 170px;
+    right: 17px;
+    opacity: 0;
+
+    animation-name: linea05rAni;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.6s;
+}
+
+@keyframes linea05rAni {
+    0% {
+        top: 170Px;
+        right: 17px;
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.2;
+    }
+
+    100% {
+        top: 149px;
+        right: -18px;
+        opacity: 0;
+    }
+}
+
+.linea06r {
+    width: 130.2px;
+    position: absolute;
+
+    top: 137px;
+    right: -25px;
+    opacity: 0;
+
+    animation-name: linea06rAni;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.65s;
+}
+
+@keyframes linea06rAni {
+    0% {
+        top: 137px;
+        right: -25px;
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.2;
+    }
+
+    100% {
+        top: 74px;
+        right: 82px;
+        opacity: 0;
+    }
+}
+
+.linea07r {
+    width: 107.1px;
+    position: absolute;
+    transform: rotate(-225deg);
+
+    top: 0px;
+    right: 27px;
+    opacity: 0;
+
+    animation-name: linea07rAni;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.45s;
+}
+
+@keyframes linea07rAni {
+    0% {
+        top: 00px;
+        right: 27px;
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.2;
+    }
+
+    100% {
+        top: 120px;
+        right: 27px;
+        opacity: 0;
+    }
+}
+
+.linea08r {
+    width: 130.2px;
+    position: absolute;
+
+    top: 141px;
+    right: 60px;
+    opacity: 0;
+
+    animation-name: linea08rAni;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.75s;
+}
+
+@keyframes linea08rAni {
+    0% {
+        top: 141Px;
+        right: 60px;
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.2;
+    }
+
+    100% {
+        top: 96px;
+        right: -15px;
+        opacity: 0;
+    }
+}
+
+.linea09r {
+    width: 107.1px;
+    position: absolute;
+    transform: rotate(-45deg);
+
+    top: 125px;
+    right: -20px;
+    opacity: 0;
+
+    animation-name: linea09rAni;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.60s;
+}
+
+@keyframes linea09rAni {
+    0% {
+        top: 125px;
+        right: -20px;
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.2;
+    }
+
+    100% {
+        top: 30px;
+        right: -20px;
+        opacity: 0;
+    }
+}
+
+.linea10r {
+    width: 130.2px;
+    position: absolute;
+
+    top: 62px;
+    right: -30px;
+    opacity: 0;
+
+    animation-name: linea10rAni;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.63s;
+}
+
+@keyframes linea10rAni {
+    0% {
+        top: 62px;
+        right: -30px;
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.2;
+    }
+
+    100% {
+        top: 122px;
+        right: 70px;
+        opacity: 0;
+    }
+}
+
+.linea11r {
+    width: 107.1px;
+    position: absolute;
+    transform: rotate(-45deg);
+
+    top: 155px;
+    right: 47px;
+    opacity: 0;
+
+    animation-name: linea11rAni;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.50s;
+}
+
+@keyframes linea11rAni {
+    0% {
+        top: 155px;
+        right: 47px;
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.2;
+    }
+
+    100% {
+        top: 10px;
+        right: 47px;
+        opacity: 0;
+    }
+}
+
+.linea13r {
+    width: 107.1px;
+    position: absolute;
+    transform: rotate(-225deg);
+
+    top: 00px;
+    right: 66px;
+    opacity: 0;
+
+    animation-name: linea13rAni;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.55s;
+}
+
+@keyframes linea13rAni {
+    0% {
+        top: 00px;
+        right: 66px;
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.2;
+    }
+
+    100% {
+        top: 120px;
+        right: 66px;
+        opacity: 0;
+    }
+}
+
+/*! ---------------------------------------------------------------------------------------------------*/
+/*! -------------------------------------- LINEAS CONTORNO  -------------------------------------------*/
+/*! ---------------------------------------------------------------------------------------------------*/
+
+/* --------------------------------------- LINEAS LETRA P  --------------------------------------------*/
+
+.lineaP1 {
+    width: 86.3px;
+    position: absolute;
+
+    top: 17px;
+    right: 99px;
+    opacity: 0;
+
+    animation-name: lineaP1Ani;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.0s;
+}
+
+@keyframes lineaP1Ani {
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}
+
+.lineaP2 {
+    width: 66.8px;
+    position: absolute;
+
+    top: 16px;
+    right: 33px;
+    opacity: 0;
+
+    animation-name: lineaP2Ani;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.5s;
+}
+
+@keyframes lineaP2Ani {
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}
+
+.lineaP3 {
+    width: 114.3px;
+    position: absolute;
+
+    top: 56px;
+    right: 34px;
+    opacity: 0;
+
+    animation-name: lineaP3Ani;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.2s;
+}
+
+@keyframes lineaP3Ani {
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}
+
+.lineaP4 {
+    width: 16px;
+    position: absolute;
+    transform: rotate(45deg);
+
+    top: 104px;
+    right: 138.5px;
+    opacity: 0;
+
+    animation-name: lineaP4Ani;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.15s;
+}
+
+@keyframes lineaP4Ani {
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}
+
+.lineaP5 {
+    width: 76.6px;
+    position: absolute;
+
+    top: 56px;
+    right: 70px;
+    opacity: 0;
+
+    animation-name: lineaP5Ani;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.2s;
+}
+
+@keyframes lineaP5Ani {
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}
+
+.lineaP6 {
+    width: 29.2px;
+    position: absolute;
+
+    top: 38px;
+    right: 70px;
+    opacity: 0;
+
+    animation-name: lineaP6Ani;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.2s;
+}
+
+@keyframes lineaP6Ani {
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}
+
+.lineaP7 {
+    width: 66.8px;
+    position: absolute;
+
+    top: 37px;
+    right: 99px;
+    opacity: 0;
+
+    animation-name: lineaP7Ani;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.05s;
+}
+
+@keyframes lineaP7Ani {
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}
+
+.lineaP8 {
+    width: 72.5px;
+    position: absolute;
+    transform: rotate(45deg);
+
+    top: 92px;
+    right: 131px;
+    opacity: 0;
+
+    animation-name: lineaP8Ani;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.20s;
+}
+
+@keyframes lineaP8Ani {
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}
+
+.lineaP9 {
+    width: 19.4px;
+    position: absolute;
+
+    top: 169px;
+    right: 166px;
+    opacity: 0;
+
+    animation-name: lineaP9Ani;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.05s;
+}
+
+@keyframes lineaP9Ani {
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}
+
+.lineaP10 {
+    width: 72.5px;
+    position: absolute;
+    transform: rotate(45deg);
+
+    top: 82px;
+    right: 149px;
+    opacity: 0;
+
+    animation-name: lineaP10Ani;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.15s;
+}
+
+@keyframes lineaP10Ani {
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}
+
+/* ------------------------------------------ LINEAS LETRA R  -----------------------------------------*/
+
+.lineaR1 {
+    width: 105px;
+    position: absolute;
+
+    top: 68px;
+    right: 14px;
+    opacity: 0;
+
+    animation-name: lineaR1Ani;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.35s;
+}
+
+@keyframes lineaR1Ani {
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}
+
+.lineaR2 {
+    width: 47.9px;
+    position: absolute;
+    transform: rotate(45deg);
+
+    top: 78px;
+    right: -9px;
+    opacity: 0;
+
+    animation-name: lineaR2Ani;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.55s;
+}
+
+@keyframes lineaR2Ani {
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}
+
+.lineaR3 {
+    width: 29.2px;
+    position: absolute;
+
+    top: 135px;
+    right: 14px;
+    opacity: 0;
+
+    animation-name: lineaR3Ani;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.55s;
+}
+
+@keyframes lineaR3Ani {
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}
+
+.lineaR3-1 {
+    width: 18.6px;
+    position: absolute;
+
+    top: 163px;
+    right: 62px;
+    opacity: 0;
+
+    animation-name: lineaR3-1Ani;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.6s;
+}
+
+@keyframes lineaR3-1Ani {
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}
+
+.lineaR4 {
+    width: 29.2px;
+    position: absolute;
+
+    top: 152px;
+    right: 15px;
+    opacity: 0;
+
+    animation-name: lineaR4Ani;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.65s;
+}
+
+@keyframes lineaR4Ani {
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}
+
+.lineaR5 {
+    width: 19px;
+    position: absolute;
+
+    top: 169px;
+    right: 15px;
+    opacity: 0;
+
+    animation-name: lineaR5Ani;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.55s;
+}
+
+@keyframes lineaR5Ani {
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}
+
+.lineaR6 {
+    width: 29.2px;
+    position: absolute;
+
+    top: 163px;
+    right: 33px;
+    opacity: 0;
+
+    animation-name: lineaR6Ani;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.45s;
+}
+
+@keyframes lineaR6Ani {
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}
+
+.lineaR7 {
+    width: 15.6px;
+    position: absolute;
+    transform: rotate(45deg);
+
+    top: 156px;
+    right: 72px;
+    opacity: 0;
+
+    animation-name: lineaR7Ani;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.55s;
+}
+
+@keyframes lineaR7Ani {
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}
+
+.lineaR8 {
+    width: 47.4px;
+    position: absolute;
+
+    top: 124.5px;
+    right: 33px;
+    opacity: 0;
+
+    animation-name: lineaR8Ani;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.70s;
+}
+
+@keyframes lineaR8Ani {
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}
+
+.lineaR9 {
+    width: 16px;
+    position: absolute;
+    transform: rotate(45deg);
+
+    top: 105px;
+    right: 25px;
+    opacity: 0;
+
+    animation-name: lineaR9Ani;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.45s;
+}
+
+@keyframes lineaR9Ani {
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}
+
+.lineaR10 {
+    width: 66.9px;
+    position: absolute;
+
+    top: 101px;
+    right: 33px;
+    opacity: 0;
+
+    animation-name: lineaR10Ani;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.60s;
+}
+
+@keyframes lineaR10Ani {
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}
+
+.lineaR11 {
+    width: 56.5px;
+    position: absolute;
+    transform: rotate(45deg);
+
+    top: 151px;
+    right: 73px;
+    opacity: 0;
+
+    animation-name: lineaR11Ani;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.35s;
+}
+
+@keyframes lineaR11Ani {
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}
+
+.lineaR12 {
+    width: 19.4px;
+    position: absolute;
+
+    top: 209px;
+    right: 100px;
+    opacity: 0;
+
+    animation-name: lineaR12Ani;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.35s;
+}
+
+@keyframes lineaR12Ani {
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}
+
+.lineaR13 {
+    width: 56px;
+    position: absolute;
+    transform: rotate(45deg);
+
+    top: 142px;
+    right: 91px;
+    opacity: 0;
+
+    animation-name: lineaR13Ani;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.35s;
+}
+
+@keyframes lineaR13Ani {
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}
+
+/*!---------------------------------------------- LINKS INTRO -----------------------------------------------*/
+
+@font-face {
+    font-family: alumniFont;
+    src: url(../fonts/AlumniSansPinstripe-Regular.ttf);
+}
+
+.linksIntro {
+    width: 100%;
+
+    grid-column: 2;
+    grid-row: 4;
+    display: grid;
+    grid-template-columns: 3rem 40px auto auto 40px 3rem;
+    grid-template-rows: 20px 20px;
+}
+
+.link_refres {
+    grid-column: 2;
+    grid-row: 1 / -1;
+}
+
+.refreshIcon {
+    width: 40px;
+    height: 40px;
+    filter: drop-shadow(0px 0px 10px #000000);
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    opacity: 0;
+
+    grid-column: 2;
+    grid-row: 1 / -1;
+
+    animation-name: refreshIconAni;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 9s;
+
+    transition: 2s;
+}
+
+@keyframes refreshIconAni {
+    0% {
+        opacity: 0;
+        filter: blur(10px);
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+
+.refreshIcon:hover {
+    transform: rotate(360deg);
+}
+
+.link_download {
+    grid-column: 5;
+    grid-row: 1 / -1;
+}
+
+.downloadIcon {
+    width: 40px;
+    height: 40px;
+    filter: drop-shadow(0px 0px 10px #000000);
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    opacity: 0;
+
+    grid-column: 5;
+    grid-row: 1 / -1;
+
+    animation-name: downloadIconAni;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 9.5s;
+
+    transition: 0.5s;
+}
+
+@keyframes downloadIconAni {
+    0% {
+        opacity: 0;
+        filter: blur(10px);
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+
+.downloadIcon:hover {
+    transform: translateY(-3px);
+    scale: 1.1;
+}
+
+.introLinksText {
+    font-size: 16px;
+    font-family: alumniFont;
+    color: rgba(255, 255, 255, 0.788);
+    opacity: 0;
+    letter-spacing: 0.07rem;
+}
+
+.introLinksTextL {
+    text-align: left;
+    margin-left: 0.8rem;
+
+    animation-name: introLinksTextLAni;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 8.5s;
+
+    transform: translateX(-70px);
+}
+
+@keyframes introLinksTextLAni {
+    0% {
+        opacity: 0;
+        transform: translateX(-70px);
+        filter: blur(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(00px);
+        filter: blur(0px);
+    }
+}
+
+.introLinksTextR {
+    text-align: right;
+    margin-right: 0.8rem;
+
+    animation-name: introLinksTextRAni;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 9s;
+
+    transform: translateX(70px);
+}
+
+@keyframes introLinksTextRAni {
+    0% {
+        opacity: 0;
+        transform: translateX(70px);
+        filter: blur(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(00px);
+        filter: blur(0px);
+    }
+}
+
+.refreshTextA {
+    grid-column: 3;
+    grid-row: 1;
+
+}
+
+.refreshTextB {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.downloadTextA {
+    grid-column: 4;
+    grid-row: 1;
+}
+
+.downloadTextB {
+    grid-column: 4;
+    grid-row: 2;
+}
+
+.divisor_barL {
+    height: 40px;
+    opacity: 0.25;
+    filter: blur(0.65px);
+    opacity: 0;
+
+    grid-column: 3;
+    grid-row: 1 / 3;
+
+    animation-name: divisor_barLAni;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 11s;
+}
+
+@keyframes divisor_barLAni {
+    0% {
+        opacity: 0;
+        filter: blur(20px);
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+
+.divisor_barR {
+    height: 40px;
+    opacity: 0.25;
+    filter: blur(0.65px);
+    opacity: 0;
+
+    transform: translateX(38px);
+
+    grid-column: 4;
+    grid-row: 1 / 3;
+
+    animation-name: divisor_barRAni;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 11s;
+}
+
+@keyframes divisor_barRAni {
+    0% {
+        opacity: 0;
+        filter: blur(20px);
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+
+
+/*!! ---------------------------------------------------------------------------------------------------- */
+
+.myName {
+    grid-column: 3;
+    grid-row: 5;
+
+    font-family: cinematograficaFont;
+    /* font-family: neutroFont; */
+    /* font-family: alumniFont; */
+    /* font-family: rosnocFont; */
+    /* font-family: euroFont; */
+    /* font-family: kincrevFont; */
+    /* font-family: bobcatFont; */
+    /* font-family: elyzabethFont; */
+    /* font-family: zrnicFont; */
+
+    font-size: 40px;
+    color: #ffffffec;
+    text-align: center;
+    opacity: 0;
+    letter-spacing: 0.15rem;
+    font-weight: 100;
+    text-shadow: (0px 0px 10px #000000);
+
+    transform: translateY(75px);
+    transition: 1.5s;
+
+    animation-name: myNameAni;
+    animation-duration: 2s;
+    animation-delay: 7.8s;
+    animation-fill-mode: forwards;
+}
+
+.myName:hover {
+    letter-spacing: 0.24rem;
+}
+
+@keyframes myNameAni {
+    0% {
+        opacity: 0;
+        filter: blur(8px);
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
