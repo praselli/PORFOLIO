@@ -26,6 +26,7 @@
     100% {background-image: url(../img/backgrounds/18.png);}
 }
 
+/*? ------------------------------------------------------------------------------------------------------*/
 /*!! ------------------------------------------  FONTS  ------------------------------------------------- */
 
 @font-face {
@@ -103,9 +104,6 @@
     src: url(../fonts/zrnic\ rg.ttf);
 }
 
-
-/*!! ---------------------------------------------------------------------------------------------------- */
-
 /*? -----------------------------------------------------------------------------------------------------------*/
 /*? ----------------------------------------- QUERYS MOOD PHONE ----------------------------------------------*/
 /*? -----------------------------------------------------------------------------------------------------------*/
@@ -117,7 +115,8 @@ body {
     background-size: 100vw 100%;
     background-repeat: no-repeat;
     overflow-y: hidden;
-
+    overflow-x: hidden;
+    
     background-size: cover;
     background-color: rgb(88, 88, 88);
 
@@ -126,8 +125,8 @@ body {
     animation-iteration-count: infinite;
 
     display: grid;
-    grid-template-columns: auto 510px auto;        /*! <<<<< LOS PX DEL MEDIO SON LA SUMATORIA DEL "introContent" */
-    grid-template-rows: auto 480px 2rem 40px auto; /*! <<<<< LOS PX DEL MEDIO SON LA SUMATORIA DEL "introContent" */
+    grid-template-columns: auto 200px auto;        /*! <<<<< LOS PX DEL MEDIO SON LA SUMATORIA DEL "introContent" */
+    grid-template-rows: auto 477.4px auto 40px 1rem; /*! <<<<< LOS PX DEL MEDIO SON LA SUMATORIA DEL "introContent" */
 }
 
 .introContent {
@@ -137,13 +136,13 @@ body {
     grid-row: 2;
 
     display: grid;
-    grid-template-columns: 75px 80px 200px 80px 75px;
-    grid-template-rows: 121.3px 81.2px 75px 81.2px auto;
+    grid-template-columns: 200px;
+    grid-template-rows: 30px 50px 237.4px 60px 50px 50px ;
 }
 
 .englishButton {
-    grid-column: 1 / 3;
-    grid-row: 3 / 4;
+    grid-column: 1;
+    grid-row: 5;
 
     font-family: agencyFont;
     font-size: 40px;
@@ -191,8 +190,8 @@ body {
 }
 
 .espanishButton {
-    grid-column: 4 / 6;
-    grid-row: 3 / 4;
+    grid-column: 1;
+    grid-row: 6;
 
     font-family: agencyFont;
     font-size: 40px;
@@ -239,14 +238,261 @@ body {
     -webkit-text-stroke: 0.2px rgb(125, 238, 229);
 }
 
+/*!---------------------------------------------- LINKS INTRO -----------------------------------------------*/
+
+@font-face {
+    font-family: alumniFont;
+    src: url(../fonts/AlumniSansPinstripe-Regular.ttf);
+}
+
+.linksIntro {
+    width: 100%;
+
+    grid-column: 1 / 4;
+    grid-row: 4;
+    display: grid;
+    grid-template-columns: auto 40px auto auto 40px auto;
+    grid-template-rows: 20px 20px;
+}
+
+.link_refres {
+    grid-column: 2;
+    grid-row: 1 / -1;
+}
+
+.refreshIcon {
+    width: 40px;
+    height: 40px;
+    filter: drop-shadow(0px 0px 10px #000000);
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    opacity: 0;
+
+    grid-column: 2;
+    grid-row: 1 / -1;
+
+    animation-name: refreshIconAni;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 9s;
+
+    transition: 2s;
+}
+
+@keyframes refreshIconAni {
+    0% {
+        opacity: 0;
+        filter: blur(10px);
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+
+.refreshIcon:hover {
+    transform: rotate(360deg);
+}
+
+.link_download {
+    grid-column: 5;
+    grid-row: 1 / -1;
+}
+
+.downloadIcon {
+    width: 40px;
+    height: 40px;
+    filter: drop-shadow(0px 0px 10px #000000);
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    opacity: 0;
+
+    grid-column: 5;
+    grid-row: 1 / -1;
+
+    animation-name: downloadIconAni;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 9.5s;
+
+    transition: 0.5s;
+}
+
+@keyframes downloadIconAni {
+    0% {
+        opacity: 0;
+        filter: blur(10px);
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+
+.downloadIcon:hover {
+    transform: translateY(-3px);
+    scale: 1.1;
+}
+
+.introLinksText {
+    display: inline;
+    font-size: 16px;
+    font-family: alumniFont;
+    color: rgba(255, 255, 255, 0.788);
+    opacity: 0;
+    letter-spacing: 0.07rem;
+}
+
+.introLinksTextL {
+    text-align: left;
+    margin-left: 0.8rem;
+
+    animation-name: introLinksTextLAni;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 8.5s;
+
+    transform: translateX(-70px);
+}
+
+@keyframes introLinksTextLAni {
+    0% {
+        opacity: 0;
+        transform: translateX(-70px);
+        filter: blur(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(00px);
+        filter: blur(0px);
+    }
+}
+
+.introLinksTextR {
+    text-align: right;
+    margin-right: 0.8rem;
+
+    animation-name: introLinksTextRAni;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 9s;
+
+    transform: translateX(70px);
+}
+
+@keyframes introLinksTextRAni {
+    0% {
+        opacity: 0;
+        transform: translateX(70px);
+        filter: blur(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(00px);
+        filter: blur(0px);
+    }
+}
+
+.refreshTextA {
+    grid-column: 3;
+    grid-row: 1;
+
+}
+
+.refreshTextB {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.downloadTextA {
+    grid-column: 4;
+    grid-row: 1;
+}
+
+.downloadTextB {
+    grid-column: 4;
+    grid-row: 2;
+}
+
+.divisor_barL {
+    display: none;
+}
+
+.divisor_barR {
+    display: none;
+}
+
+/*? ------------------------------------------------------------------------------------------------------*/
+/*!! ---------------------------------------------------------------------------------------------------- */
+
+.myName {
+    grid-column: 1;
+    grid-row: 1;
+
+    font-family: cinematograficaFont;
+    /* font-family: neutroFont; */
+    /* font-family: alumniFont; */
+    /* font-family: rosnocFont; */
+    /* font-family: euroFont; */
+    /* font-family: kincrevFont; */
+    /* font-family: bobcatFont; */
+    /* font-family: elyzabethFont; */
+    /* font-family: zrnicFont; */
+
+    font-size: 40px;
+    color: #ffffffec;
+    text-align: center;
+    opacity: 0;
+    letter-spacing: 0.15rem;
+    font-weight: 100;
+    text-shadow: (0px 0px 10px #000000);
+
+    /* transform: translateY(75px); */
+    transition: 1.5s;
+
+    animation-name: myNameAni;
+    animation-duration: 2s;
+    animation-delay: 7.8s;
+    animation-fill-mode: forwards;
+}
+
+.myName:hover {
+    letter-spacing: 0.24rem;
+}
+
+@keyframes myNameAni {
+    0% {
+        opacity: 0;
+        filter: blur(8px);
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+
+/*? ----------------------------------------------------------------------------------------------------*/
 /*! ----------------------------------------------------------------------------------------------------*/
 /*! --------------------------------------- ELEMENTOS LOGO  --------------------------------------------*/
 /*! ----------------------------------------------------------------------------------------------------*/
 
 .logoConteiner {
     width: 200px;
-    grid-column: 3 / 4;
-    grid-row: 2 / 5;
+    grid-column: 1;
+    grid-row: 3;
     position: relative;
 }
 
@@ -1887,298 +2133,6 @@ body {
     }
 }
 
-/*!---------------------------------------------- LINKS INTRO -----------------------------------------------*/
-
-@font-face {
-    font-family: alumniFont;
-    src: url(../fonts/AlumniSansPinstripe-Regular.ttf);
-}
-
-.linksIntro {
-    width: 100%;
-
-    grid-column: 2;
-    grid-row: 4;
-    display: grid;
-    grid-template-columns: 3rem 40px auto auto 40px 3rem;
-    grid-template-rows: 20px 20px;
-}
-
-.link_refres {
-    grid-column: 2;
-    grid-row: 1 / -1;
-}
-
-.refreshIcon {
-    width: 40px;
-    height: 40px;
-    filter: drop-shadow(0px 0px 10px #000000);
-
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    opacity: 0;
-
-    grid-column: 2;
-    grid-row: 1 / -1;
-
-    animation-name: refreshIconAni;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-    animation-delay: 9s;
-
-    transition: 2s;
-}
-
-@keyframes refreshIconAni {
-    0% {
-        opacity: 0;
-        filter: blur(10px);
-    }
-
-    100% {
-        opacity: 1;
-        filter: blur(0px);
-    }
-}
-
-.refreshIcon:hover {
-    transform: rotate(360deg);
-}
-
-.link_download {
-    grid-column: 5;
-    grid-row: 1 / -1;
-}
-
-.downloadIcon {
-    width: 40px;
-    height: 40px;
-    filter: drop-shadow(0px 0px 10px #000000);
-
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    opacity: 0;
-
-    grid-column: 5;
-    grid-row: 1 / -1;
-
-    animation-name: downloadIconAni;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-    animation-delay: 9.5s;
-
-    transition: 0.5s;
-}
-
-@keyframes downloadIconAni {
-    0% {
-        opacity: 0;
-        filter: blur(10px);
-    }
-
-    100% {
-        opacity: 1;
-        filter: blur(0px);
-    }
-}
-
-.downloadIcon:hover {
-    transform: translateY(-3px);
-    scale: 1.1;
-}
-
-.introLinksText {
-    font-size: 16px;
-    font-family: alumniFont;
-    color: rgba(255, 255, 255, 0.788);
-    opacity: 0;
-    letter-spacing: 0.07rem;
-}
-
-.introLinksTextL {
-    text-align: left;
-    margin-left: 0.8rem;
-
-    animation-name: introLinksTextLAni;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-    animation-delay: 8.5s;
-
-    transform: translateX(-70px);
-}
-
-@keyframes introLinksTextLAni {
-    0% {
-        opacity: 0;
-        transform: translateX(-70px);
-        filter: blur(20px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(00px);
-        filter: blur(0px);
-    }
-}
-
-.introLinksTextR {
-    text-align: right;
-    margin-right: 0.8rem;
-
-    animation-name: introLinksTextRAni;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-    animation-delay: 9s;
-
-    transform: translateX(70px);
-}
-
-@keyframes introLinksTextRAni {
-    0% {
-        opacity: 0;
-        transform: translateX(70px);
-        filter: blur(20px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(00px);
-        filter: blur(0px);
-    }
-}
-
-.refreshTextA {
-    grid-column: 3;
-    grid-row: 1;
-
-}
-
-.refreshTextB {
-    grid-column: 3;
-    grid-row: 2;
-}
-
-.downloadTextA {
-    grid-column: 4;
-    grid-row: 1;
-}
-
-.downloadTextB {
-    grid-column: 4;
-    grid-row: 2;
-}
-
-.divisor_barL {
-    height: 40px;
-    opacity: 0.25;
-    filter: blur(0.65px);
-    opacity: 0;
-
-    grid-column: 3;
-    grid-row: 1 / 3;
-
-    animation-name: divisor_barLAni;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    animation-delay: 11s;
-}
-
-@keyframes divisor_barLAni {
-    0% {
-        opacity: 0;
-        filter: blur(20px);
-    }
-
-    100% {
-        opacity: 1;
-        filter: blur(0px);
-    }
-}
-
-.divisor_barR {
-    height: 40px;
-    opacity: 0.25;
-    filter: blur(0.65px);
-    opacity: 0;
-
-    transform: translateX(38px);
-
-    grid-column: 4;
-    grid-row: 1 / 3;
-
-    animation-name: divisor_barRAni;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    animation-delay: 11s;
-}
-
-@keyframes divisor_barRAni {
-    0% {
-        opacity: 0;
-        filter: blur(20px);
-    }
-
-    100% {
-        opacity: 1;
-        filter: blur(0px);
-    }
-}
-
-
-/*!! ---------------------------------------------------------------------------------------------------- */
-
-.myName {
-    grid-column: 3;
-    grid-row: 5;
-
-    font-family: cinematograficaFont;
-    /* font-family: neutroFont; */
-    /* font-family: alumniFont; */
-    /* font-family: rosnocFont; */
-    /* font-family: euroFont; */
-    /* font-family: kincrevFont; */
-    /* font-family: bobcatFont; */
-    /* font-family: elyzabethFont; */
-    /* font-family: zrnicFont; */
-
-    font-size: 40px;
-    color: #ffffffec;
-    text-align: center;
-    opacity: 0;
-    letter-spacing: 0.15rem;
-    font-weight: 100;
-    text-shadow: (0px 0px 10px #000000);
-
-    transform: translateY(75px);
-    transition: 1.5s;
-
-    animation-name: myNameAni;
-    animation-duration: 2s;
-    animation-delay: 7.8s;
-    animation-fill-mode: forwards;
-}
-
-.myName:hover {
-    letter-spacing: 0.24rem;
-}
-
-@keyframes myNameAni {
-    0% {
-        opacity: 0;
-        filter: blur(8px);
-    }
-
-    100% {
-        opacity: 1;
-        filter: blur(0px);
-    }
-}
 
 /*? -----------------------------------------------------------------------------------------------------------*/
 /*? ----------------------------------------- QUERYS MOOD TABLET ----------------------------------------------*/
@@ -2314,6 +2268,304 @@ body {
         text-shadow: 0px 0px 12px rgba(164, 233, 218, 0.945);
         -webkit-text-stroke: 0.2px rgb(125, 238, 229);
     }
+
+    
+    /*!---------------------------------------------- LINKS INTRO -----------------------------------------------*/
+
+    @font-face {
+        font-family: alumniFont;
+        src: url(../fonts/AlumniSansPinstripe-Regular.ttf);
+    }
+
+    .linksIntro {
+        width: 100%;
+
+        grid-column: 2;
+        grid-row: 4;
+        display: grid;
+        grid-template-columns: 3rem 40px auto auto 40px 3rem;
+        grid-template-rows: 20px 20px;
+    }
+
+    .link_refres {
+        grid-column: 2;
+        grid-row: 1 / -1;
+    }
+
+    .refreshIcon {
+        width: 40px;
+        height: 40px;
+        filter: drop-shadow(0px 0px 10px #000000);
+
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        opacity: 0;
+
+        grid-column: 2;
+        grid-row: 1 / -1;
+
+        animation-name: refreshIconAni;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+        animation-delay: 9s;
+
+        transition: 2s;
+    }
+
+    @keyframes refreshIconAni {
+        0% {
+            opacity: 0;
+            filter: blur(10px);
+        }
+
+        100% {
+            opacity: 1;
+            filter: blur(0px);
+        }
+    }
+
+    .refreshIcon:hover {
+        transform: rotate(360deg);
+    }
+
+    .link_download {
+        grid-column: 5;
+        grid-row: 1 / -1;
+    }
+
+    .downloadIcon {
+        width: 40px;
+        height: 40px;
+        filter: drop-shadow(0px 0px 10px #000000);
+
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        opacity: 0;
+
+        grid-column: 5;
+        grid-row: 1 / -1;
+
+        animation-name: downloadIconAni;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+        animation-delay: 9.5s;
+
+        transition: 0.5s;
+    }
+
+    @keyframes downloadIconAni {
+        0% {
+            opacity: 0;
+            filter: blur(10px);
+        }
+
+        100% {
+            opacity: 1;
+            filter: blur(0px);
+        }
+    }
+
+    .downloadIcon:hover {
+        transform: translateY(-3px);
+        scale: 1.1;
+    }
+
+    .introLinksText {
+        display: inline;
+        font-size: 16px;
+        font-family: alumniFont;
+        color: rgba(255, 255, 255, 0.788);
+        opacity: 0;
+        letter-spacing: 0.07rem;
+    }
+
+    .introLinksTextL {
+        text-align: left;
+        margin-left: 0.8rem;
+
+        animation-name: introLinksTextLAni;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+        animation-delay: 8.5s;
+
+        transform: translateX(-70px);
+    }
+
+    @keyframes introLinksTextLAni {
+        0% {
+            opacity: 0;
+            transform: translateX(-70px);
+            filter: blur(20px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(00px);
+            filter: blur(0px);
+        }
+    }
+
+    .introLinksTextR {
+        text-align: right;
+        margin-right: 0.8rem;
+
+        animation-name: introLinksTextRAni;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+        animation-delay: 9s;
+
+        transform: translateX(70px);
+    }
+
+    @keyframes introLinksTextRAni {
+        0% {
+            opacity: 0;
+            transform: translateX(70px);
+            filter: blur(20px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(00px);
+            filter: blur(0px);
+        }
+    }
+
+    .refreshTextA {
+        grid-column: 3;
+        grid-row: 1;
+
+    }
+
+    .refreshTextB {
+        grid-column: 3;
+        grid-row: 2;
+    }
+
+    .downloadTextA {
+        grid-column: 4;
+        grid-row: 1;
+    }
+
+    .downloadTextB {
+        grid-column: 4;
+        grid-row: 2;
+    }
+
+    .divisor_barL {
+        display: inline;
+        height: 40px;
+        opacity: 0.25;
+        filter: blur(0.65px);
+        opacity: 0;
+
+        grid-column: 3;
+        grid-row: 1 / 3;
+
+        animation-name: divisor_barLAni;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        animation-delay: 11s;
+    }
+
+    @keyframes divisor_barLAni {
+        0% {
+            opacity: 0;
+            filter: blur(20px);
+        }
+
+        100% {
+            opacity: 1;
+            filter: blur(0px);
+        }
+    }
+
+    .divisor_barR {
+        display: inline;
+        height: 40px;
+        opacity: 0.25;
+        filter: blur(0.65px);
+        opacity: 0;
+
+        transform: translateX(38px);
+
+        grid-column: 4;
+        grid-row: 1 / 3;
+
+        animation-name: divisor_barRAni;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        animation-delay: 11s;
+    }
+
+    @keyframes divisor_barRAni {
+        0% {
+            opacity: 0;
+            filter: blur(20px);
+        }
+
+        100% {
+            opacity: 1;
+            filter: blur(0px);
+        }
+    }
+
+
+    /*!! ---------------------------------------------------------------------------------------------------- */
+
+    .myName {
+        grid-column: 3;
+        grid-row: 5;
+
+        font-family: cinematograficaFont;
+        /* font-family: neutroFont; */
+        /* font-family: alumniFont; */
+        /* font-family: rosnocFont; */
+        /* font-family: euroFont; */
+        /* font-family: kincrevFont; */
+        /* font-family: bobcatFont; */
+        /* font-family: elyzabethFont; */
+        /* font-family: zrnicFont; */
+
+        font-size: 40px;
+        color: #ffffffec;
+        text-align: center;
+        opacity: 0;
+        letter-spacing: 0.15rem;
+        font-weight: 100;
+        text-shadow: (0px 0px 10px #000000);
+
+        transform: translateY(75px);
+        transition: 1.5s;
+
+        animation-name: myNameAni;
+        animation-duration: 2s;
+        animation-delay: 7.8s;
+        animation-fill-mode: forwards;
+    }
+
+    .myName:hover {
+        letter-spacing: 0.24rem;
+    }
+
+    @keyframes myNameAni {
+        0% {
+            opacity: 0;
+            filter: blur(8px);
+        }
+
+        100% {
+            opacity: 1;
+            filter: blur(0px);
+        }
+    }
+
 
     /*! ----------------------------------------------------------------------------------------------------*/
     /*! --------------------------------------- ELEMENTOS LOGO  --------------------------------------------*/
@@ -3960,299 +4212,6 @@ body {
 
         100% {
             opacity: 0.3;
-        }
-    }
-
-    /*!---------------------------------------------- LINKS INTRO -----------------------------------------------*/
-
-    @font-face {
-        font-family: alumniFont;
-        src: url(../fonts/AlumniSansPinstripe-Regular.ttf);
-    }
-
-    .linksIntro {
-        width: 100%;
-
-        grid-column: 2;
-        grid-row: 4;
-        display: grid;
-        grid-template-columns: 3rem 40px auto auto 40px 3rem;
-        grid-template-rows: 20px 20px;
-    }
-
-    .link_refres {
-        grid-column: 2;
-        grid-row: 1 / -1;
-    }
-
-    .refreshIcon {
-        width: 40px;
-        height: 40px;
-        filter: drop-shadow(0px 0px 10px #000000);
-
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        opacity: 0;
-
-        grid-column: 2;
-        grid-row: 1 / -1;
-
-        animation-name: refreshIconAni;
-        animation-duration: 3s;
-        animation-fill-mode: forwards;
-        animation-delay: 9s;
-
-        transition: 2s;
-    }
-
-    @keyframes refreshIconAni {
-        0% {
-            opacity: 0;
-            filter: blur(10px);
-        }
-
-        100% {
-            opacity: 1;
-            filter: blur(0px);
-        }
-    }
-
-    .refreshIcon:hover {
-        transform: rotate(360deg);
-    }
-
-    .link_download {
-        grid-column: 5;
-        grid-row: 1 / -1;
-    }
-
-    .downloadIcon {
-        width: 40px;
-        height: 40px;
-        filter: drop-shadow(0px 0px 10px #000000);
-
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        opacity: 0;
-
-        grid-column: 5;
-        grid-row: 1 / -1;
-
-        animation-name: downloadIconAni;
-        animation-duration: 3s;
-        animation-fill-mode: forwards;
-        animation-delay: 9.5s;
-
-        transition: 0.5s;
-    }
-
-    @keyframes downloadIconAni {
-        0% {
-            opacity: 0;
-            filter: blur(10px);
-        }
-
-        100% {
-            opacity: 1;
-            filter: blur(0px);
-        }
-    }
-
-    .downloadIcon:hover {
-        transform: translateY(-3px);
-        scale: 1.1;
-    }
-
-    .introLinksText {
-        font-size: 16px;
-        font-family: alumniFont;
-        color: rgba(255, 255, 255, 0.788);
-        opacity: 0;
-        letter-spacing: 0.07rem;
-    }
-
-    .introLinksTextL {
-        text-align: left;
-        margin-left: 0.8rem;
-
-        animation-name: introLinksTextLAni;
-        animation-duration: 3s;
-        animation-fill-mode: forwards;
-        animation-delay: 8.5s;
-
-        transform: translateX(-70px);
-    }
-
-    @keyframes introLinksTextLAni {
-        0% {
-            opacity: 0;
-            transform: translateX(-70px);
-            filter: blur(20px);
-        }
-
-        100% {
-            opacity: 1;
-            transform: translateX(00px);
-            filter: blur(0px);
-        }
-    }
-
-    .introLinksTextR {
-        text-align: right;
-        margin-right: 0.8rem;
-
-        animation-name: introLinksTextRAni;
-        animation-duration: 3s;
-        animation-fill-mode: forwards;
-        animation-delay: 9s;
-
-        transform: translateX(70px);
-    }
-
-    @keyframes introLinksTextRAni {
-        0% {
-            opacity: 0;
-            transform: translateX(70px);
-            filter: blur(20px);
-        }
-
-        100% {
-            opacity: 1;
-            transform: translateX(00px);
-            filter: blur(0px);
-        }
-    }
-
-    .refreshTextA {
-        grid-column: 3;
-        grid-row: 1;
-
-    }
-
-    .refreshTextB {
-        grid-column: 3;
-        grid-row: 2;
-    }
-
-    .downloadTextA {
-        grid-column: 4;
-        grid-row: 1;
-    }
-
-    .downloadTextB {
-        grid-column: 4;
-        grid-row: 2;
-    }
-
-    .divisor_barL {
-        height: 40px;
-        opacity: 0.25;
-        filter: blur(0.65px);
-        opacity: 0;
-
-        grid-column: 3;
-        grid-row: 1 / 3;
-
-        animation-name: divisor_barLAni;
-        animation-duration: 2s;
-        animation-fill-mode: forwards;
-        animation-delay: 11s;
-    }
-
-    @keyframes divisor_barLAni {
-        0% {
-            opacity: 0;
-            filter: blur(20px);
-        }
-
-        100% {
-            opacity: 1;
-            filter: blur(0px);
-        }
-    }
-
-    .divisor_barR {
-        height: 40px;
-        opacity: 0.25;
-        filter: blur(0.65px);
-        opacity: 0;
-
-        transform: translateX(38px);
-
-        grid-column: 4;
-        grid-row: 1 / 3;
-
-        animation-name: divisor_barRAni;
-        animation-duration: 2s;
-        animation-fill-mode: forwards;
-        animation-delay: 11s;
-    }
-
-    @keyframes divisor_barRAni {
-        0% {
-            opacity: 0;
-            filter: blur(20px);
-        }
-
-        100% {
-            opacity: 1;
-            filter: blur(0px);
-        }
-    }
-
-
-    /*!! ---------------------------------------------------------------------------------------------------- */
-
-    .myName {
-        grid-column: 3;
-        grid-row: 5;
-
-        font-family: cinematograficaFont;
-        /* font-family: neutroFont; */
-        /* font-family: alumniFont; */
-        /* font-family: rosnocFont; */
-        /* font-family: euroFont; */
-        /* font-family: kincrevFont; */
-        /* font-family: bobcatFont; */
-        /* font-family: elyzabethFont; */
-        /* font-family: zrnicFont; */
-
-        font-size: 40px;
-        color: #ffffffec;
-        text-align: center;
-        opacity: 0;
-        letter-spacing: 0.15rem;
-        font-weight: 100;
-        text-shadow: (0px 0px 10px #000000);
-
-        transform: translateY(75px);
-        transition: 1.5s;
-
-        animation-name: myNameAni;
-        animation-duration: 2s;
-        animation-delay: 7.8s;
-        animation-fill-mode: forwards;
-    }
-
-    .myName:hover {
-        letter-spacing: 0.24rem;
-    }
-
-    @keyframes myNameAni {
-        0% {
-            opacity: 0;
-            filter: blur(8px);
-        }
-
-        100% {
-            opacity: 1;
-            filter: blur(0px);
         }
     }
 
