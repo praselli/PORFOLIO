@@ -126,7 +126,7 @@ body {
 
     display: grid;
     grid-template-columns: auto 200px auto;        /*! <<<<< LOS PX DEL MEDIO SON LA SUMATORIA DEL "introContent" */
-    grid-template-rows: auto 477.4px auto 40px 1rem; /*! <<<<< LOS PX DEL MEDIO SON LA SUMATORIA DEL "introContent" */
+    grid-template-rows: auto 477.4px auto 40px auto; /*! <<<<< LOS PX DEL MEDIO SON LA SUMATORIA DEL "introContent" */
 }
 
 .introContent {
