@@ -1,5 +1,367 @@
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+/*? ------------------------------------------------------------------------------------------------------*/
+/*! ----------------------------------------- MENU POP-UP ------------------------------------------------*/
+
+.logo_icon {
+    width: 50px;
+    top: 15px;
+    left: 15px;
+    position: absolute;
+    cursor: pointer;
+    /*!! <<< PUNTERO DE SELECCIÓN */
+    opacity: 0.6;
+    z-index: 10;
+    transition: 0.5s;
+}
+
+.logo_icon_active {
+    width: 50px;
+    top: 15px;
+    left: 15px;
+    transform: rotate(60deg);
+    position: absolute;
+    cursor: pointer;
+    /*!! <<< PUNTERO DE SELECCIÓN */
+    opacity: 0.6;
+    z-index: 100;
+    transition: 0.5s;
+}
+
+.logo_icon:hover {
+    opacity: 1;
+    filter: drop-shadow(0px 0px 5px rgba(164, 233, 218, 0.9));
+}
+
+.logo_icon_active:hover {
+    opacity: 1;
+    filter: drop-shadow(0px 0px 5px rgba(164, 233, 218, 0.9));
+}
+
+/*! --------------------------------------- ICONO DOWNLOAD ----------------------------------------------*/
+
+.download_icon_hide {
+    width: 45px;
+    top: 19px;
+    left: 17px;
+    position: absolute;
+
+    opacity: 0;
+
+    z-index: 5;
+    transition: 0.8s;
+}
+
+.download_icon_active {
+    width: 45px;
+    top: 19px;
+    left: 72.5px;
+    position: absolute;
+
+    opacity: 0.8;
+
+    z-index: 100;
+    transition: 0.8s;
+}
+
+.download_icon_active:hover {
+    opacity: 1;
+    filter: drop-shadow(0px 0px 5px rgba(164, 233, 218, 0.9));
+}
+
+/*! --------------------------------------- ICONO LINKEDIN --------------------------------------------*/
+
+.in_icon_hide {
+    width: 45px;
+    top: 19px;
+    left: 17px;
+    position: absolute;
+
+    opacity: 0;
+
+    z-index: 5;
+    transition: 0.8s;
+}
+
+.in_icon_active {
+    width: 45px;
+    top: 66.5px;
+    left: 44.5px;
+    position: absolute;
+
+    opacity: 0.8;
+
+    z-index: 100;
+    transition: 0.8s;
+}
+
+.in_icon_active:hover {
+    opacity: 1;
+    filter: drop-shadow(0px 0px 5px rgba(164, 233, 218, 0.9));
+}
+
+/*! ------------------------------------------- ICONO INDEX ---------------------------------------------*/
+
+.index_icon_hide {
+    width: 45px;
+    top: 19px;
+    left: 17px;
+    position: absolute;
+
+    opacity: 0;
+
+    z-index: 5;
+    transition: 0.8s;
+}
+
+.index_icon_active {
+    width: 45px;
+    top: 66.5px;
+    left: 97.5px;
+    position: absolute;
+
+    opacity: 0.8;
+    z-index: 100;
+    transition: 0.8s;
+}
+
+.index_icon_active:hover {
+    opacity: 1;
+    filter: drop-shadow(0px 0px 5px rgba(164, 233, 218, 0.9));
+}
+
+/*! --------------------------------------------- DIVISOR ------------------------------------------------*/
+
+.menu_divisor_hide {
+    width: 50px;
+    top: 61px;
+    left: 69.5px;
+    position: absolute;
+    scale: 0;
+    transition: 0.5s;
+}
+
+.menu_divisor_active {
+    width: 50px;
+    top: 61px;
+    left: 68.5px;
+    position: absolute;
+    scale: 1;
+    transition: 0.5s;
+    z-index: 100;
+}
+
+/*? ------------------------------------------------------------------------------------------------------*/
+/*! ----------------------------------------- RESUME DOWNLOAD --------------------------------------------*/
+
+.download_text {
+    text-decoration: none;
+    font-family: alumniFont;
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    text-align: left;
+    letter-spacing: 0.07em;
+    line-height: 60px;
+    text-align: center;
+}
+
+.text_link {
+    text-decoration: none;
+}
+/*? ------------------------------------------------------------------------------------------------------*/
+/*? -------------------------------------- BARRAS SCROLL -------------------------------------------------*/
+
+/*! --------------------------------  BARRA SCROLL / PROFILE  ------------------------------------------- */
+
+.profileContent::-webkit-scrollbar {
+    background-color: #2a273100;
+    width: 5px;
+}
+
+.profileContent::-webkit-scrollbar-thumb {
+    background-color: #3d3d5856;
+    width: 5px;
+    border-radius: 5px;
+}
+
+.profileContent::-webkit-scrollbar-thumb:hover {
+    background-color: #a9ac16;
+}
+
+/*! --------------------------------  BARRA SCROLL / SKILLS  -------------------------------------------- */
+
+.skillsContent::-webkit-scrollbar {
+    background-color: #2a273100;
+    width: 5px;
+}
+
+.skillsContent::-webkit-scrollbar-thumb {
+    background-color: #3d3d5856;
+    width: 5px;
+    border-radius: 5px;
+}
+
+.skillsContent::-webkit-scrollbar-thumb:hover {
+    background-color: #a9ac16;
+}
+
+/*! --------------------------------------  BARRA SCROLL / PROJECTS  ------------------------------------ */
+
+.projectsContent::-webkit-scrollbar {
+    background-color: #2a273100;
+    width: 5px;
+}
+
+.projectsContent::-webkit-scrollbar-thumb {
+    background-color: #3d3d5856;
+    width: 5px;
+    border-radius: 5px;
+}
+
+.projectsContent::-webkit-scrollbar-thumb:hover {
+    background-color: #a9ac16;
+}
+
+/*! ------------------------------------  BARRA SCROLL / CONTACT  -------------------------------------- */
+
+.contactContent::-webkit-scrollbar {
+    background-color: #2a273100;
+    width: 5px;
+}
+
+.contactContent::-webkit-scrollbar-thumb {
+    background-color: #3d3d5856;
+    width: 5px;
+    border-radius: 5px;
+}
+
+.contactContent::-webkit-scrollbar-thumb:hover {
+    background-color: #a9ac16;
+}
+
+/*? ------------------------------------------------------------------------------------------------------*/
+/*! ---------------------------------------- EDUCATION CERTS ---------------------------------------------*/
+
+.SQL_imgCert {
+    width: 100ch;
+    border-radius: 20px;
+    filter: drop-shadow(0px 0px 25px black);
+}
+
+.JS_imgCert {
+    width: 100ch;
+    border-radius: 20px;
+    filter: drop-shadow(0px 0px 25px black);
+}
+
+.DW1_imgCert {
+    width: 100ch;
+    border-radius: 20px;
+    filter: drop-shadow(0px 0px 25px black);
+}
+
+.DW2_imgCert {
+    width: 100ch;
+    border-radius: 20px;
+    filter: drop-shadow(0px 0px 25px black);
+}
+
+.HighSchool_cert {
+    width: 100ch;
+    border-radius: 20px;
+    filter: drop-shadow(0px 0px 25px black);
+}
+
+/*? ------------------------------------------------------------------------------------------------------*/
+/*!! ------------------------------------------  FONTS  ------------------------------------------------- */
+
+@font-face {
+    font-family: fartageFont;
+    src: url(../fonts/Fartage.otf);
+}
+
+@font-face {
+    font-family: fartageOutLineFont;
+    src: url(../fonts/Fartage\ Outline.otf);
+}
+
+@font-face {
+    font-family: dreamsFont;
+    src: url(../fonts/DREAMS.ttf);
+}
+
+@font-face {
+    font-family: conexyFont;
+    src: url(../fonts/Konexy\ Font.otf);
+}
+
+@font-face {
+    font-family: neutroFont;
+    src: url(../fonts/Neutro-Bold.otf);
+}
+
+@font-face {
+    font-family: alumniFont;
+    src: url(../fonts/AlumniSansPinstripe-Regular.ttf);
+}
+
+@font-face {
+    font-family: rosnocFont;
+    src: url(../fonts/Rosnoc.otf);
+}
+
+@font-face {
+    font-family: euroFont;
+    src: url(../fonts/EuroStyle\ Normal.ttf);
+}
+
+@font-face {
+    font-family: kincrevFont;
+    src: url(../fonts/Kincrev-L3rPg.otf);
+}
+
+@font-face {
+    font-family: bobcatFont;
+    src: url(../fonts/Bobcat-Regular.ttf);
+}
+
+@font-face {
+    font-family: elyzabethFont;
+    src: url(../fonts/ElyzabethPro-Regular.otf);
+}
+
+@font-face {
+    font-family: zrnicFont;
+    src: url(../fonts/zrnic\ rg.ttf);
+}
+
+@font-face {
+    font-family: enterFont;
+    src: url(../fonts/Enter\ Cromix\ -\ italic.otf);
+}
+
+@font-face {
+    font-family: enterOutLineFont;
+    src: url(../fonts/Enter\ Cromix\ -\ Outline\ Italic.otf);
+}
+
+@font-face {
+    font-family: coderFont;
+    src: url(../fonts/Coder-Regular.otf);
+}
+
+@font-face {
+    font-family: saturasFont;
+    src: url(../fonts/Saturas-Italic.otf);
+}
+
+/*!! -------------------------------------------------------------------------------------------------------- */
 
 
 /*? -----------------------------------------------------------------------------------------------------------*/
@@ -7,12 +369,6 @@
 /*? -----------------------------------------------------------------------------------------------------------*/
 
 @media (min-width: 768px) {
-
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
 
     body {
         display: flex;
@@ -175,91 +531,6 @@
         opacity: 1;
     }
 
-    /*!! ------------------------------------------  FONTS  ------------------------------------------------- */
-
-    @font-face {
-        font-family: fartageFont;
-        src: url(../fonts/Fartage.otf);
-    }
-
-    @font-face {
-        font-family: fartageOutLineFont;
-        src: url(../fonts/Fartage\ Outline.otf);
-    }
-
-    @font-face {
-        font-family: dreamsFont;
-        src: url(../fonts/DREAMS.ttf);
-    }
-
-    @font-face {
-        font-family: conexyFont;
-        src: url(../fonts/Konexy\ Font.otf);
-    }
-
-    @font-face {
-        font-family: neutroFont;
-        src: url(../fonts/Neutro-Bold.otf);
-    }
-
-    @font-face {
-        font-family: alumniFont;
-        src: url(../fonts/AlumniSansPinstripe-Regular.ttf);
-    }
-
-    @font-face {
-        font-family: rosnocFont;
-        src: url(../fonts/Rosnoc.otf);
-    }
-
-    @font-face {
-        font-family: euroFont;
-        src: url(../fonts/EuroStyle\ Normal.ttf);
-    }
-
-    @font-face {
-        font-family: kincrevFont;
-        src: url(../fonts/Kincrev-L3rPg.otf);
-    }
-
-    @font-face {
-        font-family: bobcatFont;
-        src: url(../fonts/Bobcat-Regular.ttf);
-    }
-
-    @font-face {
-        font-family: elyzabethFont;
-        src: url(../fonts/ElyzabethPro-Regular.otf);
-    }
-
-    @font-face {
-        font-family: zrnicFont;
-        src: url(../fonts/zrnic\ rg.ttf);
-    }
-
-    @font-face {
-        font-family: enterFont;
-        src: url(../fonts/Enter\ Cromix\ -\ italic.otf);
-    }
-
-    @font-face {
-        font-family: enterOutLineFont;
-        src: url(../fonts/Enter\ Cromix\ -\ Outline\ Italic.otf);
-    }
-
-    @font-face {
-        font-family: coderFont;
-        src: url(../fonts/Coder-Regular.otf);
-    }
-
-    @font-face {
-        font-family: saturasFont;
-        src: url(../fonts/Saturas-Italic.otf);
-    }
-
-
-    /*!! ----------------------------------------------------------------------- */
-
     .sectionTitle {
 
         /* font-family: fartageFont; */
@@ -286,184 +557,14 @@
         letter-spacing: 0.07em;
     }
 
-
-    /*! -------------------------------------- MENU POP-UP ----------------------------------------*/
-
-    .logo_icon {
-        width: 50px;
-        top: 15px;
-        left: 15px;
-        position: absolute;
-        cursor: pointer;
-        /*!! <<< PUNTERO DE SELECCIÓN */
-        opacity: 0.6;
-        z-index: 10;
-        transition: 0.5s;
-    }
-
-    .logo_icon_active {
-        width: 50px;
-        top: 15px;
-        left: 15px;
-        transform: rotate(60deg);
-        position: absolute;
-        cursor: pointer;
-        /*!! <<< PUNTERO DE SELECCIÓN */
-        opacity: 0.6;
-        z-index: 10;
-        transition: 0.5s;
-    }
-
-    .logo_icon:hover {
-        opacity: 1;
-        filter: drop-shadow(0px 0px 5px rgba(164, 233, 218, 0.9));
-    }
-
-    .logo_icon_active:hover {
-        opacity: 1;
-        filter: drop-shadow(0px 0px 5px rgba(164, 233, 218, 0.9));
-    }
-
-    /*! --------------- ICONO DOWNLOAD --------------------*/
-
-    .download_icon_hide {
-        width: 45px;
-        top: 19px;
-        left: 17px;
-        position: absolute;
-
-        opacity: 0;
-
-        z-index: 5;
-        transition: 0.8s;
-    }
-
-    .download_icon_active {
-        width: 45px;
-        top: 19px;
-        left: 72.5px;
-        position: absolute;
-
-        opacity: 0.8;
-
-        z-index: 5;
-        transition: 0.8s;
-    }
-
-    .download_icon_active:hover {
-        opacity: 1;
-        filter: drop-shadow(0px 0px 5px rgba(164, 233, 218, 0.9));
-    }
-
-    /*! --------------- ICONO LINKEDIN --------------------*/
-
-    .in_icon_hide {
-        width: 45px;
-        top: 19px;
-        left: 17px;
-        position: absolute;
-
-        opacity: 0;
-
-        z-index: 5;
-        transition: 0.8s;
-    }
-
-    .in_icon_active {
-        width: 45px;
-        top: 66.5px;
-        left: 44.5px;
-        position: absolute;
-
-        opacity: 0.8;
-
-        z-index: 5;
-        transition: 0.8s;
-    }
-
-    .in_icon_active:hover {
-        opacity: 1;
-        filter: drop-shadow(0px 0px 5px rgba(164, 233, 218, 0.9));
-    }
-
-    /*! --------------- ICONO INDEX --------------------*/
-
-    .index_icon_hide {
-        width: 45px;
-        top: 19px;
-        left: 17px;
-        position: absolute;
-
-        opacity: 0;
-
-        z-index: 5;
-        transition: 0.8s;
-    }
-
-    .index_icon_active {
-        width: 45px;
-        top: 66.5px;
-        left: 97.5px;
-        position: absolute;
-
-        opacity: 0.8;
-        z-index: 5;
-        transition: 0.8s;
-    }
-
-    .index_icon_active:hover {
-        opacity: 1;
-        filter: drop-shadow(0px 0px 5px rgba(164, 233, 218, 0.9));
-    }
-
-    /*! --------------- DIVISOR --------------------*/
-
-    .menu_divisor_hide {
-        width: 50px;
-        top: 61px;
-        left: 69.5px;
-        position: absolute;
-        scale: 0;
-        /* opacity: 0; */
-        transition: 0.5s;
-    }
-
-    .menu_divisor_active {
-        width: 50px;
-        top: 61px;
-        left: 68.5px;
-        position: absolute;
-        scale: 1;
-        /* opacity: 1; */
-        transition: 0.5s;
-    }
-
-    /*! -------------------------------------- RESUME DOWNLOAD ----------------------------------------*/
-
-    .download_text {
-        text-decoration: none;
-        font-family: alumniFont;
-        font-size: 35px;
-        color: rgb(255, 255, 255);
-        font-weight: 600;
-        text-align: left;
-        letter-spacing: 0.07em;
-        line-height: 60px;
-        text-align: center;
-    }
-
-    .text_link {
-        text-decoration: none;
-    }
-
     /*! ---------------------------------------------------------------------------------------------------*/
     /*! -------------------------------------- CONTENIDO "PROFILE" ----------------------------------------*/
     /*! ---------------------------------------------------------------------------------------------------*/
 
     .profileContent {
         display: grid;
-        grid-template-columns: 0.1rem 40px 0.7rem 130px 1rem 2px 1rem auto 0.5rem;
-        grid-template-rows: 1rem 190px 1rem 40px 40px 40px 1rem;
+        grid-template-columns: 0.1rem 35px 0.4rem 150px 0.7rem 2px 0.7rem auto 0.5rem;
+        grid-template-rows: 1rem 198px 1rem 40px 40px 40px 1rem;
 
         overflow: auto;
     }
@@ -603,20 +704,6 @@
         grid-row: 7;
     }
 
-    /*! --------------------------------  BARRA SCROLL / PROFILE  ------------------------------- */
-
-    .profileInfo::-webkit-scrollbar {
-        background-color: #2a273100;
-        width: 5px;
-    }
-
-    .profileInfo::-webkit-scrollbar-thumb {
-        background-color: #3d3d5856;
-        border-radius: 5px;
-    }
-
-    /*! ----------------------------------------------------------------------------------------- */
-
     .divisorBar {
         grid-column: 6 /7;
         grid-row: 2 / 9;
@@ -639,7 +726,7 @@
     }
 
     .profile-text {
-        font-size: 16px;
+        font-size: 15px;
         font-family: alumniFont;
         font-weight: 450;
         color: rgb(255, 255, 255);
@@ -806,39 +893,7 @@
         scale: 1.07;
     }
 
-    /*! ----------------------------------------- EDUCATION CERTS ------------------------------------------------*/
 
-    .SQL_imgCert {
-        width: 100ch;
-        border-radius: 20px;
-        filter: drop-shadow(0px 0px 25px black);
-    }
-
-    .JS_imgCert {
-        width: 100ch;
-        border-radius: 20px;
-        filter: drop-shadow(0px 0px 25px black);
-    }
-
-    .DW1_imgCert {
-        width: 100ch;
-        border-radius: 20px;
-        filter: drop-shadow(0px 0px 25px black);
-    }
-
-    .DW2_imgCert {
-        width: 100ch;
-        border-radius: 20px;
-        filter: drop-shadow(0px 0px 25px black);
-    }
-
-    .HighSchool_cert {
-        width: 100ch;
-        border-radius: 20px;
-        filter: drop-shadow(0px 0px 25px black);
-    }
-
-    /*! ----------------------------------------------------------------------------------------------------------*/
 
     .frameDate {
         font-size: 22px;
@@ -1249,20 +1304,6 @@
         letter-spacing: 0.05em;
     }
 
-    /*! --------------------------------  BARRA SCROLL / SKILLS  ------------------------------- */
-
-    .skillsContent::-webkit-scrollbar {
-        background-color: #2a273100;
-    }
-
-    .skillsContent::-webkit-scrollbar-thumb {
-        background-color: #3d3d5856;
-        border-radius: 5px;
-    }
-
-    /*! ---------------------------------------------------------------------------------------- */
-
-
     /*! ---------------------------------------------------------------------------------------------------*/
     /*! ------------------------------------- CONTENIDO "PROJECTS" ----------------------------------------*/
     /*! ---------------------------------------------------------------------------------------------------*/
@@ -1618,7 +1659,7 @@
         border: solid 1.5px rgba(0, 0, 0, 0.267);
 
         font-family: kincrevFont;
-        font-size: 18px;
+        font-size: 15px;
         color: rgb(219, 216, 216);
         font-weight: 600;
         text-align: left;
@@ -1661,7 +1702,7 @@
         border: solid 2px rgba(255, 255, 255, 0.267);
         border-radius: 6px;
         font-family: kincrevFont;
-        font-size: 18px;
+        font-size: 15px;
         color: rgb(226, 226, 226);
         font-weight: 500;
         text-align: center;
@@ -1671,6 +1712,8 @@
 
     .button:hover {
         background-color: rgba(255, 231, 14, 0.932);
+        color: rgb(0, 0, 0);
+        font-weight: 1000;
     }
 
     .clear_button {
@@ -1777,12 +1820,6 @@
 /*? -----------------------------------------------------------------------------------------------------------*/
 
 @media (min-width: 1100px) {
-
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
 
     body {
         display: flex;
@@ -1950,91 +1987,6 @@
         opacity: 1;
     }
 
-    /*!! ------------------------------------------  FONTS  ------------------------------------------------- */
-
-    @font-face {
-        font-family: fartageFont;
-        src: url(../fonts/Fartage.otf);
-    }
-
-    @font-face {
-        font-family: fartageOutLineFont;
-        src: url(../fonts/Fartage\ Outline.otf);
-    }
-
-    @font-face {
-        font-family: dreamsFont;
-        src: url(../fonts/DREAMS.ttf);
-    }
-
-    @font-face {
-        font-family: conexyFont;
-        src: url(../fonts/Konexy\ Font.otf);
-    }
-
-    @font-face {
-        font-family: neutroFont;
-        src: url(../fonts/Neutro-Bold.otf);
-    }
-
-    @font-face {
-        font-family: alumniFont;
-        src: url(../fonts/AlumniSansPinstripe-Regular.ttf);
-    }
-
-    @font-face {
-        font-family: rosnocFont;
-        src: url(../fonts/Rosnoc.otf);
-    }
-
-    @font-face {
-        font-family: euroFont;
-        src: url(../fonts/EuroStyle\ Normal.ttf);
-    }
-
-    @font-face {
-        font-family: kincrevFont;
-        src: url(../fonts/Kincrev-L3rPg.otf);
-    }
-
-    @font-face {
-        font-family: bobcatFont;
-        src: url(../fonts/Bobcat-Regular.ttf);
-    }
-
-    @font-face {
-        font-family: elyzabethFont;
-        src: url(../fonts/ElyzabethPro-Regular.otf);
-    }
-
-    @font-face {
-        font-family: zrnicFont;
-        src: url(../fonts/zrnic\ rg.ttf);
-    }
-
-    @font-face {
-        font-family: enterFont;
-        src: url(../fonts/Enter\ Cromix\ -\ italic.otf);
-    }
-
-    @font-face {
-        font-family: enterOutLineFont;
-        src: url(../fonts/Enter\ Cromix\ -\ Outline\ Italic.otf);
-    }
-
-    @font-face {
-        font-family: coderFont;
-        src: url(../fonts/Coder-Regular.otf);
-    }
-
-    @font-face {
-        font-family: saturasFont;
-        src: url(../fonts/Saturas-Italic.otf);
-    }
-
-
-    /*!! ----------------------------------------------------------------------- */
-
     .sectionTitle {
 
         /* font-family: fartageFont; */
@@ -2060,177 +2012,7 @@
         text-align: left;
         letter-spacing: 0.07em;
     }
-
-
-    /*! -------------------------------------- MENU POP-UP ----------------------------------------*/
-
-    .logo_icon {
-        width: 50px;
-        top: 15px;
-        left: 15px;
-        position: absolute;
-        cursor: pointer;
-        /*!! <<< PUNTERO DE SELECCIÓN */
-        opacity: 0.6;
-        z-index: 10;
-        transition: 0.5s;
-    }
-
-    .logo_icon_active {
-        width: 50px;
-        top: 15px;
-        left: 15px;
-        transform: rotate(60deg);
-        position: absolute;
-        cursor: pointer;
-        /*!! <<< PUNTERO DE SELECCIÓN */
-        opacity: 0.6;
-        z-index: 10;
-        transition: 0.5s;
-    }
-
-    .logo_icon:hover {
-        opacity: 1;
-        filter: drop-shadow(0px 0px 5px rgba(164, 233, 218, 0.9));
-    }
-
-    .logo_icon_active:hover {
-        opacity: 1;
-        filter: drop-shadow(0px 0px 5px rgba(164, 233, 218, 0.9));
-    }
-
-    /*! --------------- ICONO DOWNLOAD --------------------*/
-
-    .download_icon_hide {
-        width: 45px;
-        top: 19px;
-        left: 17px;
-        position: absolute;
-
-        opacity: 0;
-
-        z-index: 5;
-        transition: 0.8s;
-    }
-
-    .download_icon_active {
-        width: 45px;
-        top: 19px;
-        left: 72.5px;
-        position: absolute;
-
-        opacity: 0.8;
-
-        z-index: 5;
-        transition: 0.8s;
-    }
-
-    .download_icon_active:hover {
-        opacity: 1;
-        filter: drop-shadow(0px 0px 5px rgba(164, 233, 218, 0.9));
-    }
-
-    /*! --------------- ICONO LINKEDIN --------------------*/
-
-    .in_icon_hide {
-        width: 45px;
-        top: 19px;
-        left: 17px;
-        position: absolute;
-
-        opacity: 0;
-
-        z-index: 5;
-        transition: 0.8s;
-    }
-
-    .in_icon_active {
-        width: 45px;
-        top: 66.5px;
-        left: 44.5px;
-        position: absolute;
-
-        opacity: 0.8;
-
-        z-index: 5;
-        transition: 0.8s;
-    }
-
-    .in_icon_active:hover {
-        opacity: 1;
-        filter: drop-shadow(0px 0px 5px rgba(164, 233, 218, 0.9));
-    }
-
-    /*! --------------- ICONO INDEX --------------------*/
-
-    .index_icon_hide {
-        width: 45px;
-        top: 19px;
-        left: 17px;
-        position: absolute;
-
-        opacity: 0;
-
-        z-index: 5;
-        transition: 0.8s;
-    }
-
-    .index_icon_active {
-        width: 45px;
-        top: 66.5px;
-        left: 97.5px;
-        position: absolute;
-
-        opacity: 0.8;
-        z-index: 5;
-        transition: 0.8s;
-    }
-
-    .index_icon_active:hover {
-        opacity: 1;
-        filter: drop-shadow(0px 0px 5px rgba(164, 233, 218, 0.9));
-    }
-
-    /*! --------------- DIVISOR --------------------*/
-
-    .menu_divisor_hide {
-        width: 50px;
-        top: 61px;
-        left: 69.5px;
-        position: absolute;
-        scale: 0;
-        /* opacity: 0; */
-        transition: 0.5s;
-    }
-
-    .menu_divisor_active {
-        width: 50px;
-        top: 61px;
-        left: 68.5px;
-        position: absolute;
-        scale: 1;
-        /* opacity: 1; */
-        transition: 0.5s;
-    }
-
-    /*! -------------------------------------- RESUME DOWNLOAD ----------------------------------------*/
-
-    .download_text {
-        text-decoration: none;
-        font-family: alumniFont;
-        font-size: 35px;
-        color: rgb(255, 255, 255);
-        font-weight: 600;
-        text-align: left;
-        letter-spacing: 0.07em;
-        line-height: 60px;
-        text-align: center;
-    }
-
-    .text_link {
-        text-decoration: none;
-    }
-
+    
     /*! ---------------------------------------------------------------------------------------------------*/
     /*! -------------------------------------- CONTENIDO "PROFILE" ----------------------------------------*/
     /*! ---------------------------------------------------------------------------------------------------*/
@@ -2377,25 +2159,6 @@
         grid-column: 5;
         grid-row: 7;
     }
-
-    /*! --------------------------------  BARRA SCROLL / PROFILE  ------------------------------- */
-
-    .profileContent::-webkit-scrollbar {
-        background-color: #2a273100;
-        width: 5px;
-    }
-
-    .profileContent::-webkit-scrollbar-thumb {
-        background-color: #3d3d5856;
-        width: 5px;
-        border-radius: 5px;
-    }
-
-    .profileContent::-webkit-scrollbar-thumb:hover {
-        background-color: #a9ac16;
-    }
-
-    /*! ----------------------------------------------------------------------------------------- */
 
     .divisorBar {
         grid-column: 6 /7;
@@ -2627,8 +2390,6 @@
         border-radius: 20px;
         filter: drop-shadow(0px 0px 25px black);
     }
-
-    /*! ----------------------------------------------------------------------------------------------------------*/
 
     .frameDate {
         font-size: 22px;
@@ -3029,25 +2790,6 @@
         letter-spacing: 0.05em;
     }
 
-    /*! --------------------------------  BARRA SCROLL / SKILLS  ------------------------------- */
-
-    .skillsContent::-webkit-scrollbar {
-        background-color: #2a273100;
-        width: 5px;
-    }
-
-    .skillsContent::-webkit-scrollbar-thumb {
-        background-color: #3d3d5856;
-        width: 5px;
-        border-radius: 5px;
-    }
-
-    .skillsContent::-webkit-scrollbar-thumb:hover {
-        background-color: #a9ac16;
-    }
-
-    /*! ---------------------------------------------------------------------------------------- */
-
     /*! ---------------------------------------------------------------------------------------------------*/
     /*! ------------------------------------- CONTENIDO "PROJECTS" ----------------------------------------*/
     /*! ---------------------------------------------------------------------------------------------------*/
@@ -3350,25 +3092,6 @@
         grid-row: 6;
     }
 
-    /*! --------------------------------  BARRA SCROLL / PROJECTS  ------------------------------- */
-
-    .projectsContent::-webkit-scrollbar {
-        background-color: #2a273100;
-        width: 5px;
-    }
-
-    .projectsContent::-webkit-scrollbar-thumb {
-        background-color: #3d3d5856;
-        width: 5px;
-        border-radius: 5px;
-    }
-
-    .projectsContent::-webkit-scrollbar-thumb:hover {
-        background-color: #a9ac16;
-    }
-
-    /*! ---------------------------------------------------------------------------------------- */
-
     /*! ---------------------------------------------------------------------------------------------------*/
     /*! ------------------------------------- CONTENIDO "CONTACT" -----------------------------------------*/
     /*! ---------------------------------------------------------------------------------------------------*/
@@ -3476,6 +3199,8 @@
 
     .button:hover {
         background-color: rgba(255, 231, 14, 0.932);
+        color: rgb(0, 0, 0);
+        font-weight: 1000;
     }
 
     .clear_button {
@@ -3574,24 +3299,5 @@
         grid-column: 3 / 9;
         grid-row: 11 / 12;
     }
-
-        /*! --------------------------------  BARRA SCROLL / CONTACT  ------------------------------- */
-
-        .contactContent::-webkit-scrollbar {
-            background-color: #2a273100;
-            width: 5px;
-        }
-    
-        .contactContent::-webkit-scrollbar-thumb {
-            background-color: #3d3d5856;
-            width: 5px;
-            border-radius: 5px;
-        }
-    
-        .contactContent::-webkit-scrollbar-thumb:hover {
-            background-color: #a9ac16;
-        }
-    
-        /*! ---------------------------------------------------------------------------------------- */
 
 }
