@@ -162,18 +162,19 @@
 .download_text {
     text-decoration: none;
     font-family: alumniFont;
-    font-size: 35px;
+    font-size: 27px;
     color: rgb(255, 255, 255);
     font-weight: 600;
     text-align: left;
     letter-spacing: 0.07em;
-    line-height: 60px;
+    line-height: 50px;
     text-align: center;
 }
 
 .text_link {
     text-decoration: none;
 }
+
 /*? ------------------------------------------------------------------------------------------------------*/
 /*? -------------------------------------- BARRAS SCROLL -------------------------------------------------*/
 
@@ -363,23 +364,22 @@
 
 /*!! -------------------------------------------------------------------------------------------------------- */
 
+body {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background-image: url(/img/backgrounds/09.png);
+background-size: 100vw 100%;
+background-repeat: no-repeat;
+overflow-y: hidden;
+}
 
 /*? -----------------------------------------------------------------------------------------------------------*/
 /*? ----------------------------------------- QUERYS MOOD TABLET ----------------------------------------------*/
 /*? -----------------------------------------------------------------------------------------------------------*/
 
 @media (min-width: 768px) {
-
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-image: url(/img/backgrounds/09.png);
-        background-size: 100vw 100%;
-        background-repeat: no-repeat;
-        overflow-y: hidden;
-    }
 
     .container {
         display: flex;
@@ -556,6 +556,14 @@
         text-align: left;
         letter-spacing: 0.07em;
     }
+
+    /*? ------------------------------------------------------------------------------------------------------*/
+/*! ----------------------------------------- RESUME DOWNLOAD --------------------------------------------*/
+
+.download_text {
+    font-size: 35px;
+    line-height: 60px;
+}
 
     /*! ---------------------------------------------------------------------------------------------------*/
     /*! -------------------------------------- CONTENIDO "PROFILE" ----------------------------------------*/
