@@ -23,8 +23,12 @@ clickableAreas.forEach(area => {
     });
 });
 
+// /* ---------------------- BARRAS EXPANSIBLES / MODO TELÉFONO  ------------------------------*/
 
-/* ------------------------------------ MENU POP-UP ----------------------------------------*/
+
+
+
+/* -------------------------------------- MENU POP-UP -----------------------------------------*/
 
 document.addEventListener('DOMContentLoaded', () => {
     // Selecciona el ícono principal y los íconos del menú
