@@ -418,11 +418,11 @@ overflow-y: hidden;
     }
 
     .column:hover {
-        border-top: solid 1.8px #6accd0;
-        border-right: solid 1.8px #6accd0;
-        border-left: solid 1.8px #0f6165;
-        border-bottom: solid 1.8px #0f6165;
-        box-shadow: 3px -1px 18px #14221f;
+        border-top: solid 1px #6accd0;
+        border-right: solid 1px #6accd0;
+        border-left: solid 1px #0f6165;
+        border-bottom: solid 1px #0f6165;
+        box-shadow: 3px -1px 1px #14221f;
         filter: blur(0.30px);
     }
 
@@ -474,9 +474,9 @@ overflow-y: hidden;
     .bar_frame-pc {
         display: none;
     }
-    
+
     .bar_text {
-        font-size: 14px;
+        font-size: 13.5px;
         font-weight: 500;
         font-family: Arial, Helvetica, sans-serif;
         letter-spacing: 2px;
@@ -494,8 +494,8 @@ overflow-y: hidden;
     }
 
     .column:hover .bar_text {
-        font-size: 15px;
-        letter-spacing: 20px;
+        font-size: 14px;
+        letter-spacing: 17px;
         color: #ffffff;
         text-shadow: 0px 0px 12px rgba(164, 233, 218, 0.945);
         -webkit-text-stroke: 0.2px rgb(125, 238, 229);
