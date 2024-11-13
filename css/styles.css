@@ -380,6 +380,13 @@ overflow-y: hidden;
 /*? -----------------------------------------------------------------------------------------------------------*/
 
 @media (max-width: 767px) {
+    
+    .container {
+        display: grid; /* Organiza los elementos en una cuadrícula */
+        grid-template-columns: 1fr; /* Asegura que cada columna ocupe una fila completa */
+        gap: 6px; /* Espacio entre las columnas */
+    }
+    
     .container {
         display: flex;
         flex-direction: column;
@@ -411,7 +418,7 @@ overflow-y: hidden;
         color: #fff;
         text-transform: uppercase;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.918);
-        transition: all 0.3s ease;
+        transition: height 0.3s ease;
         overflow: hidden;
         flex-direction: column;
         filter: blur(0.55px);
@@ -442,7 +449,7 @@ overflow-y: hidden;
         width: 40px;
         height: 43px;
         left: 3px;
-        filter: drop-shadow(0px 0px 1.5px rgba(241, 240, 240, 0.575));
+        filter: drop-shadow(0px 0px 2px rgba(241, 240, 240, 0.575));
         opacity: 0.3;
     }
 
@@ -453,7 +460,7 @@ overflow-y: hidden;
         height: 43px;
         margin-left: auto;
         margin-right: auto;
-        filter: drop-shadow(0px 0px 1.5px rgba(241, 240, 240, 0.575));
+        filter: drop-shadow(0px 0px 2px rgba(241, 240, 240, 0.575));
         opacity: 0.3;
     }
 
@@ -463,7 +470,7 @@ overflow-y: hidden;
         width: 40px;
         height: 43px;
         right: 3px;
-        filter: drop-shadow(0px 0px 1.5px rgba(241, 240, 240, 0.575));
+        filter: drop-shadow(0px 0px 2px rgba(241, 240, 240, 0.575));
         opacity: 0.3;
     }
 
@@ -546,23 +553,27 @@ overflow-y: hidden;
         opacity: 0;
         transition: opacity 0.3s ease;
 
-        width: 520px;
-        right: 10px;
+        width: 100%;
         position: absolute;
-        max-height: 90%;
-        /* Se ajusta al tamaño máximo del contenedor padre */
-        overflow-y: auto;
-        /* Activa el scroll solo cuando sea necesario */
-        box-sizing: border-box;
-        /* Incluye el padding en el tamaño total */
+        max-height: 80%; /* Ajusta la altura máxima para prevenir el colapso */
+        overflow-y: auto; /* Activa el scroll solo cuando sea necesario */
+        top: 50px;
+        padding: 1rem;
+
     }
 
-    .column.expanded {
-        width: 600px;
-        transition: width 0.3s ease;
+    /*! ------------------------------ CLASE PARA EXPANSIÓN EN VERTICAL -------------------------------------------*/
+
+    .column.expanded_vertical {
+        width: 80%;
+        height: 50vh;
+        transition: height 0.3s ease;
     }
 
-    .column.expanded .content {
+    /*! -----------------------------------------------------------------------------------------------------------*/
+
+
+    .column.expanded_vertical .content {
         display: grid;
         opacity: 1;
     }
