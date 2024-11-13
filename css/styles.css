@@ -446,13 +446,11 @@ overflow-y: hidden;
     }
 
     /*! ------------------------------ CLASE PARA EXPANSIÓN EN VERTICAL -------------------------------------------*/
-
     .column.expanded_vertical {
         width: 80%;
-        height: 60vh;
+        height: 56vh;
         transition: height 0.3s ease;
     }
-
     /*! -----------------------------------------------------------------------------------------------------------*/
 
 
@@ -473,7 +471,7 @@ overflow-y: hidden;
     /*! -----------------------------------------------------------------------------------------------------------*/
 
     .bar_frame_left {
-        display: inline;
+        display: none;
         position: absolute;
         width: 40px;
         height: 43px;
@@ -483,7 +481,7 @@ overflow-y: hidden;
     }
 
     .bar_frame_middle {
-        display: inline;
+        display: none;
         position: absolute;
         width: calc(100% - 86px);
         height: 43px;
@@ -494,7 +492,7 @@ overflow-y: hidden;
     }
 
     .bar_frame_right {
-        display: inline;
+        display: none;
         position: absolute;
         width: 40px;
         height: 43px;
