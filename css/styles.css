@@ -382,18 +382,15 @@ overflow-y: hidden;
 @media (max-width: 767px) {
     
     .container {
-        display: grid; /* Organiza los elementos en una cuadrícula */
-        grid-template-columns: 1fr; /* Asegura que cada columna ocupe una fila completa */
-        gap: 6px; /* Espacio entre las columnas */
-    }
-    
-    .container {
         display: flex;
         flex-direction: column;
         gap: 6px;
         justify-content: center;
         align-items: center;
         width: 100%;
+        margin-top: 5rem;
+        margin-bottom: 2rem;
+        height: 100%;
         max-width: 100%;
         margin-left: auto;
         margin-right: auto;
@@ -432,6 +429,38 @@ overflow-y: hidden;
         box-shadow: 3px -1px 1px #14221f;
         filter: blur(0.30px);
     }
+
+    .content {
+        display: block;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+
+        width: 100%;
+        position: absolute;
+        bottom: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+        max-height: 82%; /* Ajusta la altura máxima para prevenir el colapso */
+        overflow-y: auto; /* Activa el scroll solo cuando sea necesario */
+    }
+
+    /*! ------------------------------ CLASE PARA EXPANSIÓN EN VERTICAL -------------------------------------------*/
+
+    .column.expanded_vertical {
+        width: 80%;
+        height: 60vh;
+        transition: height 0.3s ease;
+    }
+
+    /*! -----------------------------------------------------------------------------------------------------------*/
+
+
+    .column.expanded_vertical .content {
+        display: grid;
+        opacity: 1;
+    }
+
 
     .clickable-area {
         cursor: pointer;
@@ -548,35 +577,6 @@ overflow-y: hidden;
         text-shadow: 0px 0px 10px rgba(164, 233, 218, 0.9);
     }
 
-    .content {
-        display: block;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-
-        width: 100%;
-        position: absolute;
-        max-height: 80%; /* Ajusta la altura máxima para prevenir el colapso */
-        overflow-y: auto; /* Activa el scroll solo cuando sea necesario */
-        top: 50px;
-        padding: 1rem;
-
-    }
-
-    /*! ------------------------------ CLASE PARA EXPANSIÓN EN VERTICAL -------------------------------------------*/
-
-    .column.expanded_vertical {
-        width: 80%;
-        height: 50vh;
-        transition: height 0.3s ease;
-    }
-
-    /*! -----------------------------------------------------------------------------------------------------------*/
-
-
-    .column.expanded_vertical .content {
-        display: grid;
-        opacity: 1;
-    }
 
     .sectionTitle {
 
