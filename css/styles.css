@@ -435,11 +435,11 @@ overflow-y: hidden;
         opacity: 0;
         transition: opacity 0.3s ease;
 
-        width: 100%;
+        width: 90%;
         position: absolute;
         bottom: 1rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
 
         max-height: 82%; /* Ajusta la altura máxima para prevenir el colapso */
         overflow-y: auto; /* Activa el scroll solo cuando sea necesario */
@@ -616,16 +616,16 @@ overflow-y: hidden;
 
     .profileContent {
         display: grid;
-        grid-template-columns: 0.1rem 35px 0.4rem 150px 0.7rem 2px 0.7rem auto 0.5rem;
-        grid-template-rows: 1rem 198px 1rem 40px 40px 40px 1rem;
+        grid-template-columns: 35px 1rem auto;
+        grid-template-rows: auto 2rem 40px 40px 40px 1rem auto 1rem;
 
         overflow: auto;
     }
 
     .personalPhoto {
         width: 100%;
-        grid-column: 2 / 5;
-        grid-row: 2 / 3;
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
         border-radius: 13px;
         border: 3px solid rgba(241, 235, 235, 0.336);
 
@@ -634,8 +634,8 @@ overflow-y: hidden;
 
     .profileInfo {
         width: 100%;
-        grid-column: 8 / 9;
-        grid-row: 2 / 9;
+        grid-column: 1 / 4;
+        grid-row: 7;
 
         display: grid;
         grid-template-columns: 20% 20% 20% 20% 20%;
@@ -758,13 +758,7 @@ overflow-y: hidden;
     }
 
     .divisorBar {
-        grid-column: 6 /7;
-        grid-row: 2 / 9;
-
-        width: 100%;
-        height: 100%;
-        background-color: rgba(255, 255, 254, 0.473);
-        border-radius: 2px;
+        display: none;
     }
 
     .profileIcon {
@@ -779,7 +773,7 @@ overflow-y: hidden;
     }
 
     .profile-text {
-        font-size: 15px;
+        font-size: 18px;
         font-family: alumniFont;
         font-weight: 450;
         color: rgb(255, 255, 255);
@@ -789,35 +783,35 @@ overflow-y: hidden;
     }
 
     .iD-icon {
-        grid-column: 2;
-        grid-row: 4;
+        grid-column: 1;
+        grid-row: 3;
 
         filter: drop-shadow(0px 5px 8px #000000);
     }
 
     .iD-text {
-        grid-column: 4;
-        grid-row: 4;
+        grid-column: 3;
+        grid-row: 3;
     }
 
     .birthday-icon {
-        grid-column: 2;
-        grid-row: 5;
+        grid-column: 1;
+        grid-row: 4;
     }
 
     .birthday-text {
-        grid-column: 4;
-        grid-row: 5;
+        grid-column: 3;
+        grid-row: 4;
     }
 
     .nationality-icon {
-        grid-column: 2;
-        grid-row: 6;
+        grid-column: 1;
+        grid-row: 5;
     }
 
     .nationality-text {
-        grid-column: 4;
-        grid-row: 6;
+        grid-column: 3;
+        grid-row: 5;
     }
 
     .content::-webkit-scrollbar {
@@ -836,8 +830,8 @@ overflow-y: hidden;
 
     .SkillsContent {
         display: grid;
-        grid-template-columns: 0.1rem auto 1rem;
-        grid-template-rows: 1rem auto 1rem;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto;
         height: auto;
 
         overflow-x: hidden;
@@ -852,15 +846,15 @@ overflow-y: hidden;
         grid-row: 2;
 
         display: grid;
-        grid-template-columns: 0.5rem 47% 47% 1rem;
-        grid-template-rows: 40px 0.5rem 160px 160px 160px 2rem;
+        grid-template-columns: auto;
+        grid-template-rows: 40px 0.5rem 160px 160px 160px 160px 160px 160px 2rem;
 
         overflow: visible;
         overflow-x: hidden;
     }
 
     .educationTitle {
-        grid-column: 2 / 7;
+        grid-column: 1;
         grid-row: 1;
         line-height: 40px;
     }
@@ -881,33 +875,33 @@ overflow-y: hidden;
     }
 
     .SQL {
-        grid-column: 2;
+        grid-column: 1;
         grid-row: 3;
     }
 
     .JS {
-        grid-column: 3;
-        grid-row: 3;
+        grid-column: 1;
+        grid-row: 4;
     }
 
     .DW {
-        grid-column: 2;
-        grid-row: 4;
+        grid-column: 1;
+        grid-row: 5;
     }
 
     .uni {
-        grid-column: 3;
-        grid-row: 4;
+        grid-column: 1;
+        grid-row: 6;
     }
 
     .DW2 {
-        grid-column: 2;
-        grid-row: 5;
+        grid-column: 1;
+        grid-row: 7;
     }
 
     .HS {
-        grid-column: 3;
-        grid-row: 5;
+        grid-column: 1;
+        grid-row: 8;
     }
 
     .educationFrame {
@@ -1009,38 +1003,38 @@ overflow-y: hidden;
     .idioms {
         width: 100%;
 
-        grid-column: 2 / 3;
-        grid-row: 4;
+        grid-column: 2 /3;
+        grid-row: 3;
         display: grid;
-        grid-template-columns: 0.5rem 47% 47% 1rem;
-        grid-template-rows: 40px 0.5rem 168px 168px 2rem;
+        grid-template-columns: auto;
+        grid-template-rows: 40px 0.5rem 168px 168px 168px 2rem;
 
         overflow: visible;
         overflow-x: hidden;
     }
 
     .idiomsTitle {
-        grid-column: 2 / 7;
+        grid-column: 1;
         grid-row: 1;
         line-height: 40px;
     }
 
     .english_1 {
-        grid-column: 2;
+        grid-column: 1;
         grid-row: 3;
     }
 
     .english_2 {
-        grid-column: 3;
-        grid-row: 3;
+        grid-column: 1;
+        grid-row: 4;
     }
 
     .englishLevels {
         width: 100%;
         height: 100%;
 
-        grid-column: 2;
-        grid-row: 4;
+        grid-column: 1;
+        grid-row: 5;
         display: grid;
         grid-template-columns: auto;
         grid-template-rows: 1rem auto auto auto 1rem;
@@ -1136,17 +1130,17 @@ overflow-y: hidden;
         width: 100%;
 
         grid-column: 2 / 3;
-        grid-row: 6;
+        grid-row: 4;
         display: grid;
-        grid-template-columns: 0.5rem 47% 47% 1rem;
-        grid-template-rows: 40px 1rem 65px 65px 65px 65px 65px 2rem;
+        grid-template-columns: auto;
+        grid-template-rows: 40px 1rem 65px 65px 65px 65px 65px 65px 65px 65px 65px 2rem;
 
         overflow: visible;
         overflow-x: hidden;
     }
 
     .programsTitle {
-        grid-column: 2 / 7;
+        grid-column: 1;
         grid-row: 1;
         line-height: 40px;
     }
@@ -1199,48 +1193,48 @@ overflow-y: hidden;
     }
 
     .vsCode {
-        grid-column: 2;
+        grid-column: 1;
         grid-row: 3;
     }
 
     .SQL_program {
-        grid-column: 3;
-        grid-row: 3;
+        grid-column: 1;
+        grid-row: 4;
     }
 
     .ecxel {
-        grid-column: 2;
-        grid-row: 4;
+        grid-column: 1;
+        grid-row: 5;
     }
 
     .corel {
-        grid-column: 3;
-        grid-row: 4;
+        grid-column: 1;
+        grid-row: 6;
     }
 
     .photoShop {
-        grid-column: 2;
-        grid-row: 5;
+        grid-column: 1;
+        grid-row: 7;
     }
 
     .autoCad {
-        grid-column: 3;
-        grid-row: 5;
+        grid-column: 1;
+        grid-row: 8;
     }
 
     .word {
-        grid-column: 2;
-        grid-row: 6;
+        grid-column: 1;
+        grid-row: 9;
     }
 
     .pPoint {
-        grid-column: 3;
-        grid-row: 6;
+        grid-column: 1;
+        grid-row: 10;
     }
 
     .vPad {
-        grid-column: 2;
-        grid-row: 7;
+        grid-column: 1;
+        grid-row: 11;
     }
 
     /*!! --------------------------------------- TECHNICAL SKILLS ------------------------------------------ */
@@ -1249,17 +1243,17 @@ overflow-y: hidden;
         width: 100%;
 
         grid-column: 2 / 3;
-        grid-row: 8;
+        grid-row: 5;
         display: grid;
-        grid-template-columns: 0.5rem 47% 47% 1rem;
-        grid-template-rows: 40px 1rem 65px 65px 65px 2rem auto 1rem;
+        grid-template-columns: auto;
+        grid-template-rows: 40px 1rem 65px 65px 65px 65px 65px 65px 2rem auto 1rem;
 
         overflow: visible;
         overflow-x: hidden;
     }
 
     .technicalTitle {
-        grid-column: 2 / 7;
+        grid-column: 1;
         grid-row: 1;
         line-height: 40px;
     }
@@ -1312,38 +1306,38 @@ overflow-y: hidden;
     }
 
     .html {
-        grid-column: 2;
+        grid-column: 1;
         grid-row: 3;
     }
 
     .css {
-        grid-column: 3;
-        grid-row: 3;
+        grid-column: 1;
+        grid-row: 4;
     }
 
     .js {
-        grid-column: 2;
-        grid-row: 4;
+        grid-column: 1;
+        grid-row: 5;
     }
 
     .sass {
-        grid-column: 3;
-        grid-row: 4;
+        grid-column: 1;
+        grid-row: 6;
     }
 
     .git {
-        grid-column: 2;
-        grid-row: 5;
+        grid-column: 1;
+        grid-row: 7;
     }
 
     .gpt {
-        grid-column: 3;
-        grid-row: 5;
+        grid-column: 1;
+        grid-row: 8;
     }
 
     .technicalText {
-        grid-column: 2 / 7;
-        grid-row: 7;
+        grid-column: 1;
+        grid-row: 10;
 
         font-size: 18px;
         font-family: alumniFont;
