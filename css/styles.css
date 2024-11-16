@@ -1365,7 +1365,7 @@ overflow-y: hidden;
     /* Botones de navegación */
     .prev, .next {
         position: absolute;
-        top: 14vw;
+        top: 13vw;
         background-color: rgba(0, 0, 0, 0);
         color: white;
         text-shadow: 0px 0px 8px black;
@@ -1390,7 +1390,7 @@ overflow-y: hidden;
         grid-row: 2 / 3;
 
         display: grid;
-        grid-template-columns: 1rem auto 25px 1rem;
+        grid-template-columns: 0.3rem auto 25px 0.3rem;
         grid-template-rows: 35px 1rem 38vw 1rem auto auto auto 1rem 1rem 1rem;
         overflow-y: auto;
         overflow-x: hidden;  
@@ -1438,7 +1438,7 @@ overflow-y: hidden;
 
     .project_text_01 {
         font-size: 18px;
-        line-height: 35px;
+        line-height: 20px;
         grid-column: 2 / 3;
         grid-row: 1;
     }
