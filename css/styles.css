@@ -1355,16 +1355,17 @@ overflow-y: hidden;
     .projectsContent {
 
         display: grid;
-        grid-template-columns: 0.1rem auto 0.1rem;
+        grid-template-columns: 100%;
         grid-template-rows: 1rem auto auto auto auto 1rem;
 
         overflow: auto;
+        overflow-y: auto;
     }
 
     /* Botones de navegación */
     .prev, .next {
         position: absolute;
-        top: 115px;
+        top: 14vw;
         background-color: rgba(0, 0, 0, 0);
         color: white;
         text-shadow: 0px 0px 8px black;
@@ -1384,13 +1385,14 @@ overflow-y: hidden;
 
     .project_FrameTipe {
         width: 100%;
-        grid-column: 2 / 3;
-        grid-row: 2;
+        height: auto;
+        grid-column: 1;
+        grid-row: 2 / 3;
 
         display: grid;
-        grid-template-columns: 1rem 450px 25px 1rem;
-        grid-template-rows: 35px 1rem 271px 1rem auto auto auto 1rem 1rem 1rem;
-        overflow-y: hidden;
+        grid-template-columns: 1rem auto 25px 1rem;
+        grid-template-rows: 35px 1rem 38vw 1rem auto auto auto 1rem 1rem 1rem;
+        overflow-y: auto;
         overflow-x: hidden;  
     }
 
@@ -1406,15 +1408,24 @@ overflow-y: hidden;
 
     .slider {
         grid-column: 2 / 4;
-        grid-row: 2;
+        grid-row: 3 / 4;
+        width: 100%;
+        height: auto;
         position: relative;
     }
 
     .slide {
-        width: 476px;
+        width: 100%;
+        height: auto;
         position: absolute;
         transition: opacity 0.5s ease-in-out; /* Transición de opacidad suave */
         filter: drop-shadow(0px 0px 6px black);
+    }
+
+    .slider img {
+        width: 100%;
+        height: auto;
+        display: block; /* Evita que las imágenes tengan márgenes adicionales */
     }
 
     .slide:first-child {
@@ -1426,7 +1437,7 @@ overflow-y: hidden;
     }
 
     .project_text_01 {
-        font-size: 21px;
+        font-size: 18px;
         line-height: 35px;
         grid-column: 2 / 3;
         grid-row: 1;
@@ -1495,34 +1506,34 @@ overflow-y: hidden;
 
     .web_desing {
         width: 100%;
-        grid-column: 2 / 3;
+        grid-column: 1 / 2;
         grid-row: 2;
 
         display: grid;
-        grid-template-columns: 0.1rem auto 1rem;
+        grid-template-columns: auto;
         grid-template-rows: 40px 0.5rem auto auto auto 3rem;
 
         overflow-x: hidden;
     }
 
     .web_desing_title {
-        grid-column: 2;
+        grid-column: 1;
         grid-row: 1;
         line-height: 40px;
     }
 
     .web_desing01 {
-        grid-column: 2;
+        grid-column: 1;
         grid-row: 3;
     }
 
     .web_desing02 {
-        grid-column: 2;
+        grid-column: 1;
         grid-row: 4;
     }
 
     .web_desing03 {
-        grid-column: 2;
+        grid-column: 1;
         grid-row: 5;
     }
 
