@@ -1,56 +1,76 @@
-
-/* --------------------------------- BARRAS EXPANSIBLES -------------------------------------*/
+// /* ---------------------- BARRAS EXPANSIBLES  ------------------------------*/
 
 // const clickableAreas = document.querySelectorAll('.clickable-area');
 
 // clickableAreas.forEach(area => {
 //     area.addEventListener('click', (event) => {
-//         // Prevenir que el clic se propague al resto de la columna
 //         event.stopPropagation();
         
 //         const column = area.closest('.column');
         
-//         // Verificar si la columna ya está expandida
-//         if (column.classList.contains('expanded')) {
-//             column.classList.remove('expanded');
+//         if (window.innerWidth < 768) {
+//             // Para resoluciones menores a 768px (vertical)
+//             if (column.classList.contains('expanded_vertical')) {
+//                 column.classList.remove('expanded_vertical');
+//             } else {
+//                 document.querySelectorAll('.column').forEach(col => col.classList.remove('expanded_vertical'));
+//                 column.classList.add('expanded_vertical');
+//             }
 //         } else {
-//             // Contraer cualquier otra columna que esté expandida
-//             document.querySelectorAll('.column').forEach(col => col.classList.remove('expanded'));
-//              // Expandir la columna actual
-//             column.classList.add('expanded');
+//             // Para resoluciones mayores a 768px (horizontal, código existente)
+//             if (column.classList.contains('expanded')) {
+//                 column.classList.remove('expanded');
+//             } else {
+//                 document.querySelectorAll('.column').forEach(col => col.classList.remove('expanded'));
+//                 column.classList.add('expanded');
+//             }
 //         }
 //     });
 // });
 
-// /* ---------------------- BARRAS EXPANSIBLES  ------------------------------*/
+document.addEventListener("DOMContentLoaded", () => {
+    const profileColumn = document.querySelector('#profile');
+    const clickableAreas = document.querySelectorAll('.clickable-area');
 
-const clickableAreas = document.querySelectorAll('.clickable-area');
+    // Expansión automática de "profile" al cargar
+    if (profileColumn) {
+        setTimeout(() => {
+            if (window.innerWidth > 767) {
+                profileColumn.classList.add('expanded');
+            } else {
+                profileColumn.classList.add('expanded_vertical');
+            }
+        }, 2000); // 2 segundos después de cargar la página
+    }
 
-clickableAreas.forEach(area => {
-    area.addEventListener('click', (event) => {
-        event.stopPropagation();
-        
-        const column = area.closest('.column');
-        
-        if (window.innerWidth < 768) {
-            // Para resoluciones menores a 768px (vertical)
-            if (column.classList.contains('expanded_vertical')) {
-                column.classList.remove('expanded_vertical');
+    // Lógica de expansión y contracción de las barras
+    clickableAreas.forEach(area => {
+        area.addEventListener('click', (event) => {
+            event.stopPropagation();
+
+            const column = area.closest('.column');
+
+            if (window.innerWidth < 768) {
+                // Modo vertical (pantallas pequeñas)
+                if (column.classList.contains('expanded_vertical')) {
+                    column.classList.remove('expanded_vertical');
+                } else {
+                    document.querySelectorAll('.column').forEach(col => col.classList.remove('expanded_vertical'));
+                    column.classList.add('expanded_vertical');
+                }
             } else {
-                document.querySelectorAll('.column').forEach(col => col.classList.remove('expanded_vertical'));
-                column.classList.add('expanded_vertical');
+                // Modo horizontal (pantallas grandes)
+                if (column.classList.contains('expanded')) {
+                    column.classList.remove('expanded');
+                } else {
+                    document.querySelectorAll('.column').forEach(col => col.classList.remove('expanded'));
+                    column.classList.add('expanded');
+                }
             }
-        } else {
-            // Para resoluciones mayores a 768px (horizontal, código existente)
-            if (column.classList.contains('expanded')) {
-                column.classList.remove('expanded');
-            } else {
-                document.querySelectorAll('.column').forEach(col => col.classList.remove('expanded'));
-                column.classList.add('expanded');
-            }
-        }
+        });
     });
 });
+
 
 
 /* -------------------------------------- MENU POP-UP -----------------------------------------*/
