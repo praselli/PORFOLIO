@@ -1,33 +1,5 @@
 // /* ---------------------- BARRAS EXPANSIBLES  ------------------------------*/
 
-// const clickableAreas = document.querySelectorAll('.clickable-area');
-
-// clickableAreas.forEach(area => {
-//     area.addEventListener('click', (event) => {
-//         event.stopPropagation();
-        
-//         const column = area.closest('.column');
-        
-//         if (window.innerWidth < 768) {
-//             // Para resoluciones menores a 768px (vertical)
-//             if (column.classList.contains('expanded_vertical')) {
-//                 column.classList.remove('expanded_vertical');
-//             } else {
-//                 document.querySelectorAll('.column').forEach(col => col.classList.remove('expanded_vertical'));
-//                 column.classList.add('expanded_vertical');
-//             }
-//         } else {
-//             // Para resoluciones mayores a 768px (horizontal, código existente)
-//             if (column.classList.contains('expanded')) {
-//                 column.classList.remove('expanded');
-//             } else {
-//                 document.querySelectorAll('.column').forEach(col => col.classList.remove('expanded'));
-//                 column.classList.add('expanded');
-//             }
-//         }
-//     });
-// });
-
 document.addEventListener("DOMContentLoaded", () => {
     const profileColumn = document.querySelector('#profile');
     const clickableAreas = document.querySelectorAll('.clickable-area');
@@ -70,8 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
-
-
 
 /* -------------------------------------- MENU POP-UP -----------------------------------------*/
 
