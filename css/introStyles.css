@@ -7,23 +7,23 @@
 
 @keyframes backgroundSlide {
 
-    0% {background-image: url(../img/backgrounds/18.png);}
+    0% {background-image: url(../img/backgrounds/09.png);}
 
-    13% {background-image: url(../img/backgrounds/15.png);}
+    /* 13% {background-image: url(../img/backgrounds/15.png);}
 
     25% {background-image: url(../img/backgrounds/17.png);}
 
-    37% {background-image: url(../img/backgrounds/11.png);}
+    37% {background-image: url(../img/backgrounds/11.png);} */
 
-    49% {background-image: url(../img/backgrounds/09.png);}
+    49% {background-image: url(../img/backgrounds/17.png);}
 
-    61% {background-image: url(../img/backgrounds/17.png);}
+    /* 61% {background-image: url(../img/backgrounds/17.png);}
 
     72% {background-image: url(../img/backgrounds/06.png);}
 
-    84% {background-image: url(../img/backgrounds/07.png);}
+    84% {background-image: url(../img/backgrounds/07.png);} */
 
-    100% {background-image: url(../img/backgrounds/18.png);}
+    100% {background-image: url(../img/backgrounds/09.png);}
 }
 
 /*? ------------------------------------------------------------------------------------------------------*/
